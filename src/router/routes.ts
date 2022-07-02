@@ -12,6 +12,7 @@ export const Routes = {
   home: "/",
   products: "/products",
   services: "/services",
+  resources: "/resources",
   aboutUs: "/about",
   contactUs: "/contact",
   blog: "/blog",

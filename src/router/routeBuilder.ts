@@ -1,4 +1,7 @@
+import { Layout } from "components";
+import { Home } from "pages";
 import { RouteProps } from "react-router-dom";
+import { Routes } from "./routes";
 
 // Route Builder Item Props
 export interface RouteBuilderItem extends RouteProps {
@@ -20,4 +23,12 @@ export interface RouteBuilderItem extends RouteProps {
  * just fulfill all the necessary props needed by the RouteBuilder item. Ciao!
  *
  */
-export const RouteBuilder: RouteBuilderItem[] = [];
+export const RouteBuilder: RouteBuilderItem[] = [
+  {
+    path: Routes.home,
+    Element: Home,
+    Layout: Layout,
+    caseSensitive: true,
+    props: {},
+  },
+];

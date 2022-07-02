@@ -1,0 +1,31 @@
+.navBg {
+  border-bottom: 1px solid #243042;
+}
+.nav {
+  max-width: var(--site-max-width);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px var(--site-max-pad);
+}
+.logo {
+  width: 150px;
+}
+.navItems {
+  max-width: 440px;
+  width: 100%;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 200;
+  font-size: 13px;
+}
+.navItem {
+  color: inherit;
+  text-decoration: none;
+}
+.btn {
+  padding: 14px 22px;
+}

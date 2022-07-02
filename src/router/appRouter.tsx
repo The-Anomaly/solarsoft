@@ -1,3 +1,4 @@
+import { Layout } from "components";
 import { ErrorBoundary, ScrollToTop } from "helpers";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
@@ -36,14 +37,7 @@ const MainRouter: React.FC = () => {
                 </ErrorBoundary>
               );
 
-            return (
-              <Route
-                key={idx}
-                path={path}
-                element={PageComponent}
-                caseSensitive={caseSensitive}
-              />
-            );
+            return <Route key={idx} path={path} element={PageComponent} caseSensitive={caseSensitive} />;
           })}
       </Routes>
     </>

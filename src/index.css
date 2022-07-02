@@ -13,6 +13,9 @@
   --white: #fcfcfc;
   --blue: #2f5fdd;
   --orange: #f78532;
+  --site-max-width: 1210px;
+  --site-max-pad: 1rem;
+  --secondaryText: #6F7282
 }
 
 body {
@@ -22,11 +25,12 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 400;
+  color: var(--white);
+  background: var(--black);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 html {
