@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px var(--site-max-pad);
+  padding: 0 var(--site-max-pad);
 }
 .logo {
   width: 150px;
@@ -25,7 +25,27 @@
 .navItem {
   color: inherit;
   text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn {
   padding: 14px 22px;
+}
+.navItem:hover [class*="wrap"] {
+  display: block !important;
+  top: 70px;
+  z-index: 1;
+  animation: fadeIn 0.2s ease-in;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
