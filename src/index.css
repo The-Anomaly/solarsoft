@@ -1,0 +1,67 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: 0.3s;
+}
+
+:root {
+  --black: #0a0e14;
+  --white: #fcfcfc;
+  --blue: #2f5fdd;
+  --orange: #f78532;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  overflow-x: hidden;
+}
+/* width and height */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+
+button,
+input,
+textarea {
+  outline: none !important;
+  font-family: "Inter", sans-serif;
+}
+svg {
+  width: initial;
+  height: auto;
+}
