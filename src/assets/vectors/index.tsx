@@ -11,6 +11,12 @@ import { ReactComponent as DappsIcon } from "./dappsIcon.svg";
 import { ReactComponent as NebulaMusicIcon } from "./nebulaMusicIcon.svg";
 import { ReactComponent as NebulaWalletIcon } from "./nebulaWalletIcon.svg";
 import { ReactComponent as SolarsoftUniIcon } from "./solarsoftUniIcon.svg";
+import { ReactComponent as LandingHero1 } from "./landingHero1.svg";
+import { ReactComponent as LandingHero2 } from "./landingHero2.svg";
+import { ReactComponent as ArrowRight } from "./arrowRight.svg";
+import { ReactComponent as ProdMania } from "./prodMania.svg";
+import { ReactComponent as StudentPaddy } from "./studentPaddy.svg";
+import { ReactComponent as TSE } from "./TSE.svg";
 
 export {
   LogoSymbol,
@@ -26,4 +32,10 @@ export {
   NebulaMusicIcon,
   NebulaWalletIcon,
   SolarsoftUniIcon,
+  LandingHero1,
+  LandingHero2,
+  ArrowRight,
+  ProdMania,
+  StudentPaddy,
+  TSE,
 };

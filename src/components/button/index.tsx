@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({ children, type, Icon, className, onClic
         onClick();
       }}
     >
-      {children} {Icon ? <Icon /> : ""}
+      {children} {Icon ? <Icon className={styles.icon} /> : ""}
     </button>
   );
 };

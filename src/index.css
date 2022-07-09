@@ -15,7 +15,7 @@
   --orange: #f78532;
   --site-max-width: 1210px;
   --site-max-pad: 1rem;
-  --secondaryText: #6F7282
+  --secondaryText: #6f7282;
 }
 
 body {
@@ -68,4 +68,11 @@ textarea {
 svg {
   width: initial;
   height: auto;
+}
+
+.siteWrapper {
+  max-width: var(--site-max-width);
+  margin: auto;
+  padding-left: var(--site-max-pad);
+  padding-right: var(--site-max-pad);
 }

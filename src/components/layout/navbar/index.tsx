@@ -117,7 +117,7 @@ const NavBar = () => {
   return (
     <>
       <nav className={styles.navBg}>
-        <div className={styles.nav}>
+        <div className={`siteWrapper ${styles.nav}`}>
           <Logo className={styles.logo} />
           <div className={styles.navItems}>
             {navItems.map((item, index) => (
