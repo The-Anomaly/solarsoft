@@ -17,6 +17,8 @@ import { ReactComponent as ArrowRight } from "./arrowRight.svg";
 import { ReactComponent as ProdMania } from "./prodMania.svg";
 import { ReactComponent as StudentPaddy } from "./studentPaddy.svg";
 import { ReactComponent as TSE } from "./TSE.svg";
+import { ReactComponent as EthereumLogo } from "./ethereumLogo.svg";
+import { ReactComponent as SolanaLogo } from "./solanaLogo.svg";
 
 export {
   LogoSymbol,
@@ -38,4 +40,6 @@ export {
   ProdMania,
   StudentPaddy,
   TSE,
+  EthereumLogo,
+  SolanaLogo,
 };

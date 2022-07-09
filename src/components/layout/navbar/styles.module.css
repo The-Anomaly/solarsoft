@@ -1,5 +1,8 @@
 .navBg {
-  border-bottom: 1px solid #243042;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  background: var(--black);
 }
 .nav {
   display: flex;
@@ -31,7 +34,7 @@
 .btn {
   padding: 14px 22px;
 }
-.navItem:hover [class*="wrap"] {
+.navItem:hover .list {
   display: block !important;
   top: 36px;
   z-index: 1;

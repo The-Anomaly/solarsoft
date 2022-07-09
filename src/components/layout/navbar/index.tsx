@@ -31,7 +31,7 @@ const NavItem: React.FC<NavItemProps> = ({ text, link, type, items }) => {
       ) : (
         <span className={`${styles.navItem} ${styles.dropdown}`}>
           {text}
-          {items ? <Dropdown items={items} /> : ""}
+          {items ? <Dropdown className={styles.list} items={items} /> : ""}
         </span>
       )}
     </>
@@ -56,7 +56,7 @@ const NavBar = () => {
       text: "Develop and build your web applications on decentralised blockchain protocols",
     },
   ];
-  
+
   const products: DropdownItem[] = [
     {
       Icon: NebulaWalletIcon,

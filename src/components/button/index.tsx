@@ -16,7 +16,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ children, type, Icon, className, onClick }) => {
   return (
     <button
-      className={`${styles.btn} ${type} ${className}`}
+      className={`${styles.btn} ${styles[type]} ${className}`}
       onClick={(e) => {
         e.preventDefault();
         onClick();

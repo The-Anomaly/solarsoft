@@ -13,11 +13,12 @@ export interface DropdownItem {
 
 export interface DropdownProps {
   items: DropdownItem[];
+  className: string
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ items }) => {
+const Dropdown: React.FC<DropdownProps> = ({ items, className }) => {
   return (
-    <div className={styles.wrap}>
+    <div className={`${styles.dropdownWrap} ${className}`}>
       {items.map((item, index) => (
         <div key={index} className={styles.item}>
           {item.Icon ? <item.Icon className={styles.icon} /> : ""}

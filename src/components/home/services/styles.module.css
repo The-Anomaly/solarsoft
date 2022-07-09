@@ -1,0 +1,76 @@
+.services {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+}
+.ttl {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.txt1 {
+  font-size: 19px;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: auto;
+  font-weight: 300;
+  margin-bottom: 10rem;
+}
+.serviceList {
+  margin-bottom: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.service {
+}
+.serviceIcon {
+  width: 44px;
+  margin-bottom: 3rem;
+  background: linear-gradient(180deg, #202d4f 0%, rgba(14, 40, 107, 0.31) 100%);
+  border-radius: 16px;
+}
+/* .serviceIcon path {
+  fill: #4677d7;
+}
+
+.serviceIcon path:first-of-type {
+  fill: none;
+} */
+
+.serviceTtl {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.serviceTxt {
+  font-size: 17.5px;
+  font-weight: 400;
+  max-width: 340px;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #6f7282;
+}
+.serviceBtn {
+  margin: auto;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 14px 20px;
+}
+.partners {
+}
+.txt2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 3rem;
+}
+.partners div {
+  width: 680px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.partners svg {
+  width: 47%;
+}
