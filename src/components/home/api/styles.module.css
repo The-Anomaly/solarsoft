@@ -1,0 +1,33 @@
+.apiSec {
+  background: linear-gradient(180deg, #4677d7 0%, rgba(0, 52, 185, 0.62) 100%);
+  display: flex;
+  align-items: center;
+  padding: 2.5rem;
+  border-radius: 8px;
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+}
+.txtSec {
+  width: 40%;
+}
+.ttl {
+  font-size: 34px;
+  font-weight: 500;
+  max-width: 300px;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+.txt {
+  width: 80%;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 2.2rem;
+}
+.btn {
+  padding: 14px 24px;
+}
+.img {
+  width: 60%;
+  max-width: 664px;
+}

@@ -4,6 +4,7 @@ import { HeroSection } from "components/heroSection";
 import { Services } from "./services";
 import { NFTCollection } from "./collections";
 import { Blogs } from "./blogs";
+import { API } from "./api";
 
 const HomeUI = () => {
   return (
@@ -12,6 +13,7 @@ const HomeUI = () => {
       <Services />
       <NFTCollection />
       <Blogs />
+      <API />
     </>
   );
 };
