@@ -3,6 +3,7 @@ import * as React from "react";
 import { HeroSection } from "components/heroSection";
 import { Services } from "./services";
 import { NFTCollection } from "./collections";
+import { Blogs } from "./blogs";
 
 const HomeUI = () => {
   return (
@@ -10,6 +11,7 @@ const HomeUI = () => {
       <HeroSection />
       <Services />
       <NFTCollection />
+      <Blogs />
     </>
   );
 };

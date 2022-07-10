@@ -9,5 +9,21 @@ import kronos3 from "./kronos3.png";
 import duckz1 from "./duckz1.png";
 import duckz2 from "./duckz2.png";
 import duckz3 from "./duckz3.png";
+import blogImage from "./blogImage.png";
+import apiCode from "./apiCode.png";
 
-export { kryptoAlienz1, kryptoAlienz2, kryptoAlienz3, alta1, alta2, kronos1, kronos2, kronos3, duckz1, duckz2, duckz3 };
+export {
+  kryptoAlienz1,
+  kryptoAlienz2,
+  kryptoAlienz3,
+  alta1,
+  alta2,
+  kronos1,
+  kronos2,
+  kronos3,
+  duckz1,
+  duckz2,
+  duckz3,
+  blogImage,
+  apiCode,
+};
