@@ -20,6 +20,8 @@ import { ReactComponent as TSE } from "./TSE.svg";
 import { ReactComponent as EthereumLogo } from "./ethereumLogo.svg";
 import { ReactComponent as SolanaLogo } from "./solanaLogo.svg";
 import { ReactComponent as CollectionBg } from "./collectionBg.svg";
+import { ReactComponent as PlusIcon } from "./plusIcon.svg";
+import { ReactComponent as MinusIcon } from "./minusIcon.svg";
 
 export {
   LogoSymbol,
@@ -44,4 +46,6 @@ export {
   EthereumLogo,
   SolanaLogo,
   CollectionBg,
+  PlusIcon,
+  MinusIcon,
 };

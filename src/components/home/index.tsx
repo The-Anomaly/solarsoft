@@ -5,6 +5,7 @@ import { Services } from "./services";
 import { NFTCollection } from "./collections";
 import { Blogs } from "./blogs";
 import { API } from "./api";
+import { FAQ } from "./faq";
 
 const HomeUI = () => {
   return (
@@ -14,6 +15,7 @@ const HomeUI = () => {
       <NFTCollection />
       <Blogs />
       <API />
+      <FAQ />
     </>
   );
 };
