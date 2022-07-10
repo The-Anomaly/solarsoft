@@ -1,0 +1,105 @@
+.collectionBg {
+  background-image: url("../../../assets/vectors/collectionBg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.collectionWrap {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.ttl {
+  text-align: center;
+  color: var(--black);
+  font-size: 3.7rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+}
+.collection {
+  display: flex;
+  justify-content: center;
+}
+.imgSec {
+  width: 40%;
+  position: relative;
+  text-align: right;
+}
+.txtSec {
+  width: 50%;
+  color: var(--black);
+}
+.imgSec img {
+  position: absolute;
+  width: 100%;
+  max-width: 420px;
+}
+.mainImage {
+  position: relative !important;
+}
+
+.krypto1 {
+  position: relative !important;
+}
+.krypto2 {
+  transform: rotate(-4.92deg);
+}
+.krypto3 {
+  transform: rotate(5.96deg);
+}
+
+.imageSlide {
+  animation-name: roll-in;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.26, 0.44, 0.48, 1.1);
+  animation-iteration-count: 1;
+}
+
+@keyframes roll-in {
+  0% {
+    left: -50vw;
+    transform: rotate(-15deg);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.btn {
+  margin: 4rem auto 0;
+  font-size: 16px;
+}
+.collectionItem {
+  max-width: 450px;
+  margin-left: auto;
+  margin-bottom: 3rem;
+}
+.collectionTtl {
+  color: var(--secondaryText);
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+}
+.collectionSubTtl {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: none;
+}
+.collectionTxt {
+  font-size: 15px;
+  line-height: 1.8;
+  display: none;
+}
+.activeCollection .collectionTtl {
+  font-weight: 700;
+  font-size: 23px;
+  margin-bottom: 14px;
+  color: var(--black);
+}
+.activeCollection .collectionSubTtl {
+  display: block;
+}
+.activeCollection .collectionTxt {
+  display: block;
+}

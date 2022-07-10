@@ -19,6 +19,7 @@ import { ReactComponent as StudentPaddy } from "./studentPaddy.svg";
 import { ReactComponent as TSE } from "./TSE.svg";
 import { ReactComponent as EthereumLogo } from "./ethereumLogo.svg";
 import { ReactComponent as SolanaLogo } from "./solanaLogo.svg";
+import { ReactComponent as CollectionBg } from "./collectionBg.svg";
 
 export {
   LogoSymbol,
@@ -42,4 +43,5 @@ export {
   TSE,
   EthereumLogo,
   SolanaLogo,
+  CollectionBg,
 };
