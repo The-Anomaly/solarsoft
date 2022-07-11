@@ -1,15 +1,15 @@
 import * as React from "react";
 import { HeroSection, OtherServices, Blogs, OtherService } from "components";
-import { DappsIcon, NftHero, SmartContractIcon } from "assets";
+import { ContractHero, DappsIcon, NftIcon } from "assets";
 import { ServiceDetails } from "./details";
 import { Routes } from "router";
 
-const NFTServiceUI = () => {
+const SmartContractServiceUI = () => {
   const services: OtherService[] = [
     {
-      Icon: SmartContractIcon,
-      text: "Smart Contract Development",
-      link: Routes.contractService,
+      Icon: NftIcon,
+      text: "Blockchain for Non-Fungible Tokens",
+      link: Routes.nftService,
     },
     {
       Icon: DappsIcon,
@@ -21,15 +21,10 @@ const NFTServiceUI = () => {
     <>
       <HeroSection
         type="other"
-        title={
-          <>
-            Blockchain for
-            <br /> Non-fungible Tokens
-          </>
-        }
-        text="Create your collection. Design, mint and trade your NFTs"
+        title={<>Smart contracts development</>}
+        text="Self-executing code to make your business easier and more efficient"
         label="SERVICES"
-        Image={NftHero}
+        Image={ContractHero}
       />
       <ServiceDetails />
       <OtherServices services={services} />
@@ -37,4 +32,4 @@ const NFTServiceUI = () => {
     </>
   );
 };
-export { NFTServiceUI };
+export { SmartContractServiceUI };

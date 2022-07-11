@@ -3,3 +3,8 @@ export * from "./layout";
 export * from "./button";
 export * from "./blogCard";
 export * from "./nftService";
+export * from "./otherServices";
+export * from "./blogs";
+export * from "./heroSection";
+export * from "./dappsService";
+export * from "./contractService";

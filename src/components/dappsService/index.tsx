@@ -1,10 +1,11 @@
 import * as React from "react";
 import { HeroSection, OtherServices, Blogs, OtherService } from "components";
-import { DappsIcon, NftHero, SmartContractIcon } from "assets";
+import { DappsHero, NftIcon, SmartContractIcon } from "assets";
 import { ServiceDetails } from "./details";
 import { Routes } from "router";
+import styles from "./styles.module.css";
 
-const NFTServiceUI = () => {
+const DappsServiceUI = () => {
   const services: OtherService[] = [
     {
       Icon: SmartContractIcon,
@@ -12,9 +13,9 @@ const NFTServiceUI = () => {
       link: Routes.contractService,
     },
     {
-      Icon: DappsIcon,
-      text: "Decentralized Applications Development",
-      link: Routes.dappsService,
+      Icon: NftIcon,
+      text: "Blockchain for Non-Fungible Tokens",
+      link: Routes.nftService,
     },
   ];
   return (
@@ -23,13 +24,13 @@ const NFTServiceUI = () => {
         type="other"
         title={
           <>
-            Blockchain for
-            <br /> Non-fungible Tokens
+            Decentralised <br /> Applications Development
           </>
         }
-        text="Create your collection. Design, mint and trade your NFTs"
+        text="Develop and build your web applications on blockchain protocols"
         label="SERVICES"
-        Image={NftHero}
+        Image={DappsHero}
+        className={styles.dapps}
       />
       <ServiceDetails />
       <OtherServices services={services} />
@@ -37,4 +38,4 @@ const NFTServiceUI = () => {
     </>
   );
 };
-export { NFTServiceUI };
+export { DappsServiceUI };

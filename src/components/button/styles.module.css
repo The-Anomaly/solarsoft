@@ -30,3 +30,6 @@
   margin-left: 13px;
   width: 14px;
 }
+.btn:hover .icon {
+  margin-left: 18px;
+}

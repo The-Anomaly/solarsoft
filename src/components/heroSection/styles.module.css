@@ -17,7 +17,7 @@
   width: 55%;
 }
 .ttl {
-  line-height: 1.4;
+  /* line-height: 1.4; */
   font-size: 3.2rem;
   font-weight: 500;
   margin-bottom: 1.8rem;
@@ -118,6 +118,8 @@
   font-size: 17px;
   font-weight: 300;
   margin-bottom: 4rem;
+  max-width: 500px;
+  line-height: 1.7;
 }
 .other .imgSec {
   margin-bottom: -2rem;
