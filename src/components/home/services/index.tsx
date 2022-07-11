@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 import * as React from "react";
-import { DappsIcon, EthereumLogo, NftIcon, SmartContractIcon, SolanaLogo } from "assets";
+import { DappsIcon2, EthereumLogo, NftIcon2, SmartContractIcon2, SolanaLogo } from "assets";
 import { Button } from "components/button";
 
 interface ServiceProp {
@@ -26,17 +26,17 @@ const Service: React.FC<ServiceProp> = ({ Icon, text, title }) => {
 const Services = () => {
   const service: ServiceProp[] = [
     {
-      Icon: <SmartContractIcon className={`${styles.serviceIcon} ${styles.smartcontract}`} />,
+      Icon: <SmartContractIcon2 className={`${styles.serviceIcon} ${styles.smartcontract}`} />,
       title: "Smart Contracts",
       text: "Self-executing code to make your business easier",
     },
     {
-      Icon: <NftIcon className={`${styles.serviceIcon} ${styles.nft}`} />,
+      Icon: <NftIcon2 className={`${styles.serviceIcon} ${styles.nft}`} />,
       title: "NFTs",
       text: "Create your collection. Design, mint and trade your NFTs",
     },
     {
-      Icon: <DappsIcon className={styles.serviceIcon} />,
+      Icon: <DappsIcon2 className={styles.serviceIcon} />,
       title: "Dapps",
       text: "Develop and build your web applications on decentralised blockchain protocols",
     },

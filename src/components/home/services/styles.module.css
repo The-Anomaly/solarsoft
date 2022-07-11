@@ -26,17 +26,7 @@
 .serviceIcon {
   width: 44px;
   margin-bottom: 3rem;
-  background: linear-gradient(180deg, #202d4f 0%, rgba(14, 40, 107, 0.31) 100%);
-  border-radius: 16px;
 }
-/* .serviceIcon path {
-  fill: #4677d7;
-}
-
-.serviceIcon path:first-of-type {
-  fill: none;
-} */
-
 .serviceTtl {
   font-size: 30px;
   font-weight: 300;

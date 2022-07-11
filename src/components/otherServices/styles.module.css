@@ -23,7 +23,8 @@
   font-size: 17px;
 }
 .service svg {
-  margin-right: 12px;
+  margin-right: 14px;
+  width: 44px;
 }
 .list {
   display: flex;

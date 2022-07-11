@@ -6,8 +6,11 @@ import { ReactComponent as InstagramIcon } from "./instagram.svg";
 import { ReactComponent as MediumIcon } from "./medium.svg";
 import { ReactComponent as LinkedinIcon } from "./linkedin.svg";
 import { ReactComponent as SmartContractIcon } from "./smartContractIcon.svg";
+import { ReactComponent as SmartContractIcon2 } from "./smartContractIcon2.svg";
 import { ReactComponent as NftIcon } from "./nftIcon.svg";
+import { ReactComponent as NftIcon2 } from "./nftIcon2.svg";
 import { ReactComponent as DappsIcon } from "./dappsIcon.svg";
+import { ReactComponent as DappsIcon2 } from "./dappsIcon2.svg";
 import { ReactComponent as NebulaMusicIcon } from "./nebulaMusicIcon.svg";
 import { ReactComponent as NebulaWalletIcon } from "./nebulaWalletIcon.svg";
 import { ReactComponent as SolarsoftUniIcon } from "./solarsoftUniIcon.svg";
@@ -39,7 +42,9 @@ export {
   LinkedinIcon,
   SmartContractIcon,
   NftIcon,
+  NftIcon2,
   DappsIcon,
+  DappsIcon2,
   NebulaMusicIcon,
   NebulaWalletIcon,
   SolarsoftUniIcon,
@@ -54,4 +59,5 @@ export {
   CollectionBg,
   PlusIcon,
   MinusIcon,
+  SmartContractIcon2,
 };

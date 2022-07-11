@@ -1,6 +1,6 @@
 import * as React from "react";
 import { HeroSection, OtherServices, Blogs, OtherService } from "components";
-import { DappsIcon, NftHero, SmartContractIcon } from "assets";
+import { DappsIcon2, NftHero, SmartContractIcon } from "assets";
 import { ServiceDetails } from "./details";
 import { Routes } from "router";
 
@@ -12,7 +12,7 @@ const NFTServiceUI = () => {
       link: Routes.contractService,
     },
     {
-      Icon: DappsIcon,
+      Icon: DappsIcon2,
       text: "Decentralized Applications Development",
       link: Routes.dappsService,
     },
