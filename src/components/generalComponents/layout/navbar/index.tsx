@@ -132,7 +132,7 @@ const NavBar = () => {
               <NavItem key={index} {...item} />
             ))}
           </div>
-          <Button onClick={() => {}} type="light" className={styles.btn}>
+          <Button onClick={() => navigate(Routes.contactUs)} type="light" className={styles.btn}>
             Contact Us
           </Button>
         </div>

@@ -4,3 +4,4 @@ export * from "./dappsService";
 export * from "./contractService";
 export * from "./generalComponents";
 export * from "./blog";
+export * from "./contact";

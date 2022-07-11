@@ -1,5 +1,5 @@
 import { Layout } from "components";
-import { Blog, DappsService, Home, NFTService, SmartContractService } from "pages";
+import { Blog, Contact, DappsService, Home, NFTService, SmartContractService } from "pages";
 import { RouteProps } from "react-router-dom";
 import { Routes } from "./routes";
 
@@ -55,6 +55,13 @@ export const RouteBuilder: RouteBuilderItem[] = [
   {
     path: Routes.blog,
     Element: Blog,
+    Layout: Layout,
+    caseSensitive: true,
+    props: {},
+  },
+  {
+    path: Routes.contactUs,
+    Element: Contact,
     Layout: Layout,
     caseSensitive: true,
     props: {},
