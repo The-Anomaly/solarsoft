@@ -1,0 +1,34 @@
+.wrapperBg {
+  background-image: url("../../../assets/vectors/comingSoonBg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--white);
+}
+.wrapper {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.tag {
+  background: #74ca55;
+  color: var(--white);
+  width: fit-content;
+  padding: 16px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+.ttl {
+  color: #525458;
+  font-size: 3.2rem;
+  font-weight: 500;
+  max-width: 600px;
+  line-height: 1.3;
+}
+.txt {
+  color: #f78532;
+  text-align: right;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 1px;
+}

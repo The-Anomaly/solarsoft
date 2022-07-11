@@ -6,6 +6,8 @@ import { NFTCollection } from "./collections";
 import { Blogs } from "./blogs";
 import { API } from "./api";
 import { FAQ } from "./faq";
+import { ComingSoon } from "./comingSoon";
+import { Discord } from "./discord";
 
 const HomeUI = () => {
   return (
@@ -16,6 +18,8 @@ const HomeUI = () => {
       <Blogs />
       <API />
       <FAQ />
+      <ComingSoon />
+      <Discord />
     </>
   );
 };
