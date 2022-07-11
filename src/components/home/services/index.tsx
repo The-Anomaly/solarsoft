@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import * as React from "react";
 import { DappsIcon2, EthereumLogo, NftIcon2, SmartContractIcon2, SolanaLogo } from "assets";
-import { Button } from "components/button";
+import { Button } from "components";
 
 interface ServiceProp {
   Icon: React.ReactElement<any, any>

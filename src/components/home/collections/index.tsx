@@ -14,7 +14,7 @@ import {
   kryptoAlienz2,
   kryptoAlienz3,
 } from "assets";
-import { Button } from "components/button";
+import { Button } from "components";
 
 interface CollectionInfoProps {
   active?: number;

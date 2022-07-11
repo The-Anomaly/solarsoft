@@ -1,4 +1,4 @@
-import { Button } from "components/button";
+import { Button } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
 

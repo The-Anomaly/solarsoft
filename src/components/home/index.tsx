@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HeroSection } from "components/heroSection";
+import { HeroSection } from "components";
 import { Services } from "./services";
 import { NFTCollection } from "./collections";
 import { Blogs } from "./blogs";
@@ -7,7 +7,6 @@ import { API } from "./api";
 import { FAQ } from "./faq";
 import { ComingSoon } from "./comingSoon";
 import { Discord } from "./discord";
-import { NftHero } from "assets";
 
 const HomeUI = () => {
   return (

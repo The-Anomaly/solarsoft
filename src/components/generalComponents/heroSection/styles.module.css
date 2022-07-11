@@ -1,0 +1,142 @@
+.heroBg {
+}
+.landing {
+}
+.other {
+  background: #17284b;
+  box-shadow: 0px 60px 0px #0f192f;
+  margin-bottom: 60px;
+}
+.hero {
+  padding-top: 12.5rem;
+  padding-bottom: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+.txtSec {
+  width: 55%;
+}
+.ttl {
+  /* line-height: 1.4; */
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+}
+.txt {
+  line-height: 2;
+  font-size: 19px;
+  margin-bottom: 5rem;
+}
+.btn {
+  padding: 14px 26px;
+  margin-bottom: 2rem;
+}
+.imgSec {
+  max-height: 400px;
+  width: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+}
+.landing .imgSec {
+  animation-name: switchBg;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes switchBg {
+  0% {
+    background-image: url("../../../assets/vectors/landingHero2.svg");
+  }
+  50% {
+    background-image: url("../../../assets/vectors/landingHero1.svg");
+  }
+  100% {
+    background-image: url("../../../assets/vectors/landingHero2.svg");
+  }
+}
+.landing .imgSec::before {
+  content: "";
+  background: linear-gradient(179.77deg, rgba(16, 106, 241, 0.6) 0.2%, rgba(11, 66, 148, 0) 126.72%);
+  width: 90%;
+  max-width: 400px;
+  height: 400px;
+  display: block;
+  filter: blur(100px);
+  position: absolute;
+  top: 44%;
+  left: -24px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.partners {
+  color: #5c6786;
+  margin-top: 7rem;
+}
+.partners p {
+  font-size: 17px;
+  margin-bottom: 1.2rem;
+}
+.partners div {
+  display: flex;
+  align-items: center;
+}
+.partners svg {
+  margin-right: 30px;
+  margin-right: 3rem;
+}
+.partners svg:first-of-type {
+  width: 190px;
+}
+.partners svg:nth-of-type(2) {
+  width: 84px;
+}
+.partners svg:nth-of-type(3) {
+  width: 60px;
+}
+.label {
+  margin-bottom: 1.7rem;
+  color: #b4b8ce;
+  font-weight: 600;
+}
+.heroImg {
+  width: 100%;
+}
+.other .heroImg {
+  align-self: flex-start;
+}
+.other .ttl {
+  font-size: 3.6rem;
+  margin-bottom: 1.4rem;
+}
+.other .txt {
+  color: #b4b8ce;
+  font-size: 17px;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  max-width: 500px;
+  line-height: 1.7;
+}
+.other .imgSec {
+  margin-bottom: -2rem;
+  width: 44%;
+  margin-top: -2rem;
+  position: relative;
+  max-height: unset;
+}
+.other .imgSec::before {
+  content: "";
+  background: linear-gradient(179.77deg, rgba(16, 106, 241, 0.6) 0.2%, rgba(11, 66, 148, 0) 126.72%);
+  width: 50%;
+  max-width: 400px;
+  height: 400px;
+  display: block;
+  filter: blur(100px);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
