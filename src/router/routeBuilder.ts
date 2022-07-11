@@ -1,5 +1,6 @@
 import { Layout } from "components";
 import { Home } from "pages";
+import { NFTService } from "pages/nftService";
 import { RouteProps } from "react-router-dom";
 import { Routes } from "./routes";
 
@@ -27,6 +28,13 @@ export const RouteBuilder: RouteBuilderItem[] = [
   {
     path: Routes.home,
     Element: Home,
+    Layout: Layout,
+    caseSensitive: true,
+    props: {},
+  },
+  {
+    path: Routes.nftService,
+    Element: NFTService,
     Layout: Layout,
     caseSensitive: true,
     props: {},

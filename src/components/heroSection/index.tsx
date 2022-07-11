@@ -5,31 +5,40 @@ import styles from "./styles.module.css";
 
 interface HeroProps {
   type: "landing" | "other";
-  title: string;
+  title: string | any;
   text: string;
+  label?: string;
+  Image?: React.FunctionComponent<
+    React.SVGProps<SVGSVGElement> & {
+      title?: string | undefined;
+    }
+  >;
+  className?: string;
 }
 
-const HeroSection = () => {
+const HeroSection: React.FC<HeroProps> = ({ type, title, text, label, className, Image }) => {
   return (
-    <section className={`${styles.heroBg} ${styles.landing}`}>
+    <section className={`${styles.heroBg} ${styles[type]} ${className}`}>
       <div className={`siteWrapper ${styles.hero}`}>
         <div className={styles.txtSec}>
-          <h1 className={styles.ttl}>Blockchain infrastructure that powers businesses</h1>
-          <p className={styles.txt}>
-            We are confident you can better your business or brand by leveraging blockchain technology. We are here to
-            help you with that.
-          </p>
+          {label ? <p className={styles.label}>{label}</p> : ""}
+          <h1 className={styles.ttl}>{title}</h1>
+          <p className={styles.txt}>{text}</p>
           <Button className={styles.btn} onClick={() => {}} type="light" Icon={ArrowRight}>
             Speak with us
           </Button>
-          <div className={styles.partners}>
-            <p>We’ve partnered with great businesses in the world</p>
-            <div>
-              <ProdMania /> <StudentPaddy /> <TSE />
+          {type === "landing" ? (
+            <div className={styles.partners}>
+              <p>We’ve partnered with great businesses in the world</p>
+              <div>
+                <ProdMania /> <StudentPaddy /> <TSE />
+              </div>
             </div>
-          </div>
+          ) : (
+            ""
+          )}
         </div>
-        <div className={styles.imgSec}></div>
+        <div className={styles.imgSec}>{Image ? <Image className={styles.heroImg} /> : ""}</div>
       </div>
     </section>
   );

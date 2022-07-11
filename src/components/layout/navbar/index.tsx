@@ -10,7 +10,7 @@ import {
 import { Button } from "components/button";
 import { Dropdown, DropdownItem } from "components/dropdown";
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Routes } from "router";
 import styles from "./styles.module.css";
 
@@ -39,21 +39,25 @@ const NavItem: React.FC<NavItemProps> = ({ text, link, type, items }) => {
 };
 
 const NavBar = () => {
+  const navigate = useNavigate();
   const services: DropdownItem[] = [
     {
       Icon: SmartContractIcon,
       title: "Smart contracts",
       text: "Self executing code to make your business easier",
+      action: () => navigate(Routes.contractService),
     },
     {
       Icon: NftIcon,
       title: "NFTs",
       text: "Create your collection. Design, mint and trade your NFTs",
+      action: () => navigate(Routes.nftService),
     },
     {
       Icon: DappsIcon,
       title: "Dapps",
       text: "Develop and build your web applications on decentralised blockchain protocols",
+      action: () => navigate(Routes.dappsService),
     },
   ];
 
@@ -62,16 +66,19 @@ const NavBar = () => {
       Icon: NebulaWalletIcon,
       title: "Nebula Wallet",
       text: "A cross chain NFT wallet",
+      action: () => {},
     },
     {
       Icon: NebulaMusicIcon,
       title: "Nebula Music",
       text: "A decentralised music streaming protocol",
+      action: () => {},
     },
     {
       Icon: SolarsoftUniIcon,
       title: "Solarsoft University",
       text: "Learn about blockchain technology and NFTs",
+      action: () => {},
     },
   ];
 
@@ -79,10 +86,12 @@ const NavBar = () => {
     {
       title: "Blog",
       text: "Stay updated with news and happenings",
+      action: () => navigate(Routes.blog),
     },
     {
       title: "API Docs",
       text: "Well documented API to help you build better, faster.",
+      action: () => {},
     },
   ];
   const navItems: NavItemProps[] = [

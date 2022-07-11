@@ -1,7 +1,11 @@
 .heroBg {
-  /* outline: 1px solid red; */
 }
 .landing {
+}
+.other {
+  background: #17284b;
+  box-shadow: 0px 60px 0px #0f192f;
+  margin-bottom: 60px;
 }
 .hero {
   padding-top: 12.5rem;
@@ -93,4 +97,47 @@
 }
 .partners svg:nth-of-type(3) {
   width: 60px;
+}
+.label {
+  margin-bottom: 1.7rem;
+  color: #b4b8ce;
+  font-weight: 600;
+}
+.heroImg {
+  width: 100%;
+}
+.other .heroImg {
+  align-self: flex-start;
+}
+.other .ttl {
+  font-size: 3.6rem;
+  margin-bottom: 1.4rem;
+}
+.other .txt {
+  color: #b4b8ce;
+  font-size: 17px;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+.other .imgSec {
+  margin-bottom: -2rem;
+  width: 44%;
+  margin-top: -2rem;
+  position: relative;
+  max-height: unset;
+}
+.other .imgSec::before {
+  content: "";
+  background: linear-gradient(179.77deg, rgba(16, 106, 241, 0.6) 0.2%, rgba(11, 66, 148, 0) 126.72%);
+  width: 50%;
+  max-width: 400px;
+  height: 400px;
+  display: block;
+  filter: blur(100px);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }

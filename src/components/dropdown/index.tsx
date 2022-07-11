@@ -9,6 +9,7 @@ export interface DropdownItem {
   >;
   title: string;
   text: string;
+  action: () => void
 }
 
 export interface DropdownProps {
@@ -20,7 +21,7 @@ const Dropdown: React.FC<DropdownProps> = ({ items, className }) => {
   return (
     <div className={`${styles.dropdownWrap} ${className}`}>
       {items.map((item, index) => (
-        <div key={index} className={styles.item}>
+        <div key={index} className={styles.item} role="button" onClick={item.action} >
           {item.Icon ? <item.Icon className={styles.icon} /> : ""}
           <div>
             <p>{item.title}</p>

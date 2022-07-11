@@ -13,4 +13,7 @@ export const Routes = {
   aboutUs: "/about",
   contactUs: "/contact",
   blog: "/blog",
+  nftService: "/services/nft",
+  contractService: "/services/smart-contract",
+  dappsService: "/services/dapps",
 };

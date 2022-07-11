@@ -22,8 +22,14 @@ import { ReactComponent as SolanaLogo } from "./solanaLogo.svg";
 import { ReactComponent as CollectionBg } from "./collectionBg.svg";
 import { ReactComponent as PlusIcon } from "./plusIcon.svg";
 import { ReactComponent as MinusIcon } from "./minusIcon.svg";
+import { ReactComponent as NftHero } from "./nftHero.svg";
+import { ReactComponent as ContractHero } from "./contractHero.svg";
+import { ReactComponent as DappsHero } from "./dappsHero.svg";
 
 export {
+  NftHero,
+  ContractHero,
+  DappsHero,
   LogoSymbol,
   Logo,
   FacebookIcon,

@@ -1,4 +1,3 @@
-import styles from "./styles.module.css";
 import * as React from "react";
 import { HeroSection } from "components/heroSection";
 import { Services } from "./services";
@@ -8,11 +7,17 @@ import { API } from "./api";
 import { FAQ } from "./faq";
 import { ComingSoon } from "./comingSoon";
 import { Discord } from "./discord";
+import { NftHero } from "assets";
 
 const HomeUI = () => {
   return (
     <>
-      <HeroSection />
+      <HeroSection
+        type="landing"
+        title="Blockchain infrastructure that powers businesses"
+        text="We are confident you can better your business or brand by leveraging blockchain technology. We are here to
+            help you with that."
+      />
       <Services />
       <NFTCollection />
       <Blogs />
