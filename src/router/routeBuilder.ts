@@ -1,5 +1,5 @@
 import { Layout } from "components";
-import { DappsService, Home, NFTService, SmartContractService } from "pages";
+import { Blog, DappsService, Home, NFTService, SmartContractService } from "pages";
 import { RouteProps } from "react-router-dom";
 import { Routes } from "./routes";
 
@@ -48,6 +48,13 @@ export const RouteBuilder: RouteBuilderItem[] = [
   {
     path: Routes.contractService,
     Element: SmartContractService,
+    Layout: Layout,
+    caseSensitive: true,
+    props: {},
+  },
+  {
+    path: Routes.blog,
+    Element: Blog,
     Layout: Layout,
     caseSensitive: true,
     props: {},

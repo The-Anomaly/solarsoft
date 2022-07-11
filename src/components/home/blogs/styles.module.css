@@ -19,7 +19,7 @@
 .blogList > div:nth-child(3) {
   margin-top: 10rem;
 }
-.btn {
+button.btn {
   color: var(--white);
   font-weight: 400;
   font-size: 16px;
