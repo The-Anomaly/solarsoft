@@ -41,6 +41,7 @@
   height: 100%;
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;
+  object-fit: cover;
 }
 .img:hover {
   transform: scale(1.1);
@@ -71,16 +72,99 @@
   margin-bottom: 3rem;
 }
 
+@media screen and (max-width: 1100px) {
+}
+
 @media screen and (max-width: 1000px) {
   .ttl {
     font-size: 2.5rem;
   }
+  .blogTtl {
+    font-size: 40px;
+  }
+  .date {
+    font-size: 18px;
+  }
+  .blogTxt {
+    font-size: 18px;
+    width: 100%;
+  }
+}
 
+@media screen and (max-width: 900px) {
+  .blogList > div {
+    margin-right: 4%;
+  }
+  .blogList > div:nth-child(3n) {
+    margin-right: 4%;
+  }
+  .blogList > div:nth-child(2n) {
+    margin-right: 0;
+  }
+  .imgSec {
+    width: 35%;
+  }
+  .txtSec {
+    padding: 2rem;
+    width: 65%;
+  }
+  .blogTtl {
+    font-size: 36px;
+  }
+  .date {
+    font-size: 16px;
+    margin-bottom: 2rem;
+  }
+  .label {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .ttl {
     font-size: 2rem;
     font-weight: 600;
+  }
+  .blog {
+    flex-direction: column;
+    border-radius: 0;
+    width: 100vw;
+    margin-left: -1rem;
+    margin-bottom: 4rem;
+  }
+  .txtSec {
+    width: 100%;
+    padding: 3.5rem 1.5rem 2.5rem;
+  }
+  .imgSec {
+    max-height: 300px;
+    width: 100%;
+  }
+  .blogTtl {
+    font-size: 28px;
+  }
+  .date {
+    font-size: 14px;
+  }
+  .blogTxt {
+    font-size: 16px;
+  }
+  .blogList > div {
+    margin-right: 0 !important;
+    margin-bottom: 4rem;
+  }
+  .blogWrapper {
+    padding-bottom: 6rem;
+    padding-top: 7rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .imgSec {
+    max-height: 260px;
+  }
+  .txtSec {
+    width: 100%;
+    padding: 3rem 1rem 2rem;
   }
 }
