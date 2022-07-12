@@ -1,4 +1,4 @@
-import { DiscordIcon, FacebookIcon, InstagramIcon, LinkedinIcon, MediumIcon } from "assets";
+import { DiscordIcon, TwitterIcon, InstagramIcon, LinkedinIcon, MediumIcon } from "assets";
 import { Button } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
@@ -41,7 +41,7 @@ const Footer = () => {
           <p className={styles.txt}>By subscribing, I agree to receive communications by Solarsoft</p>
           <div className={styles.socials}>
             <a>
-              <FacebookIcon />
+              <TwitterIcon />
             </a>
             <a>
               <DiscordIcon />

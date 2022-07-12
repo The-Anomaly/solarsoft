@@ -1,0 +1,135 @@
+.aboutHeroBg {
+  background: #0b0f18;
+}
+.aboutHero {
+  padding-top: 74px;
+  display: flex;
+  align-items: center;
+}
+.txtSec {
+  width: 55%;
+}
+.label {
+  margin-bottom: 2.7rem;
+  font-weight: 500;
+  font-size: 13px;
+}
+.ttl {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+.txt {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.heroImg {
+  background-image: url("../../assets/images/aboutHeroImg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 45%;
+  min-height: 460px;
+  box-shadow: 0px 0 50px 35px #0b0f18 inset;
+  background-position: center;
+  width: 50%;
+  background-size: 100%;
+}
+.goalBg {
+  background: #fff;
+  color: var(--black);
+}
+.goal {
+  padding-top: 5rem;
+  padding-bottom: 5.5rem;
+}
+.txt2 {
+  line-height: 1.5;
+  text-align: center;
+  font-size: 30px;
+  max-width: 900px;
+  margin: 0 auto 6rem;
+}
+.teamSec {
+  background: #f8f8f8;
+  padding: 4rem;
+  padding-bottom: 5rem;
+}
+.teamTtl {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.teamList {
+  display: flex;
+  justify-content: space-between;
+}
+.member {
+  width: 230px;
+}
+.memberImg {
+  width: 100%;
+}
+.name {
+  font-size: 24px;
+  max-width: 150px;
+  margin: 1rem 0 0.8rem;
+  line-height: 1.5;
+}
+.role {
+  color: var(--secondaryText);
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+.socials {
+  display: flex;
+  align-items: center;
+}
+.socials svg {
+  margin-right: 12px;
+  width: 28px;
+}
+.socials a:first-of-type svg path {
+  fill: #0077b5;
+}
+.socials a:nth-of-type(2) svg path {
+  fill: #1da1f2;
+}
+.howSec {
+  text-align: center;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+.howTtl {
+  font-size: 44px;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.howTxt {
+  font-size: 17px;
+  line-height: 2;
+  max-width: 950px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+.convoBg {
+  background-image: url("../../assets/vectors/convoBg.svg");
+  background-color: #0f192f;
+}
+.convo {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.convoTxt {
+  font-size: 44px;
+  font-weight: 300;
+  margin-bottom: 2.3rem;
+}
+.convoBtn {
+  margin: auto;
+  font-size: 20px;
+}

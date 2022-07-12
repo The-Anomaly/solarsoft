@@ -11,8 +11,15 @@ import duckz2 from "./duckz2.png";
 import duckz3 from "./duckz3.png";
 import blogImage from "./blogImage.png";
 import apiCode from "./apiCode.png";
+import aboutHeroImg from "./aboutHeroImg.png";
+import amaku from "./amaku.png";
+import ifere from "./ifere.png";
+import moore from "./moore.png";
 
 export {
+  amaku,
+  moore,
+  ifere,
   kryptoAlienz1,
   kryptoAlienz2,
   kryptoAlienz3,
@@ -26,4 +33,5 @@ export {
   duckz3,
   blogImage,
   apiCode,
+  aboutHeroImg,
 };
