@@ -5,15 +5,26 @@ import { ServiceDetails } from "./details";
 import { Routes } from "router";
 
 const SmartContractServiceUI = () => {
+  const [mobile, setMobile] = React.useState(window.innerWidth <= 900 ? true : false);
+
+  const checkWidth = () => {
+    if (window.innerWidth <= 800) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  };
+  window.onresize = checkWidth;
+
   const services: OtherService[] = [
     {
       Icon: NftIcon2,
-      text: "Blockchain for Non-Fungible Tokens",
+      text: mobile ? "Non-Fungible Tokens" : "Blockchain for Non-Fungible Tokens",
       link: Routes.nftService,
     },
     {
       Icon: DappsIcon2,
-      text: "Decentralized Applications Development",
+      text: mobile ? "Dapp Development" : "Decentralized Applications Development",
       link: Routes.dappsService,
     },
   ];

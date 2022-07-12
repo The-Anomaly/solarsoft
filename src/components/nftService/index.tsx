@@ -1,19 +1,30 @@
 import * as React from "react";
 import { HeroSection, OtherServices, Blogs, OtherService } from "components";
-import { DappsIcon2, NftHero, SmartContractIcon } from "assets";
+import { DappsIcon2, NftHero, SmartContractIcon2 } from "assets";
 import { ServiceDetails } from "./details";
 import { Routes } from "router";
 
 const NFTServiceUI = () => {
+  const [mobile, setMobile] = React.useState(window.innerWidth <= 900 ? true : false);
+
+  const checkWidth = () => {
+    if (window.innerWidth <= 800) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  };
+  window.onresize = checkWidth;
+
   const services: OtherService[] = [
     {
-      Icon: SmartContractIcon,
-      text: "Smart Contract Development",
+      Icon: SmartContractIcon2,
+      text: mobile ? "Smart Contract" : "Smart Contract Development",
       link: Routes.contractService,
     },
     {
       Icon: DappsIcon2,
-      text: "Decentralized Applications Development",
+      text: mobile ? "Dapp Development" : "Decentralized Applications Development",
       link: Routes.dappsService,
     },
   ];

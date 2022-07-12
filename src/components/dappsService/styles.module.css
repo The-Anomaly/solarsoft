@@ -1,3 +1,9 @@
 .dapps h1 {
   white-space: nowrap;
 }
+
+@media screen and (max-width: 1100px) {
+  .dapps h1 {
+    white-space: normal;
+  }
+}

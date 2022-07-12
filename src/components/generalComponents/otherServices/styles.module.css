@@ -30,3 +30,53 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media screen and (max-width: 1200px) {
+  .ttl {
+    font-size: 32px;
+  }
+  .service {
+    padding: 12px 1.5rem;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ttl {
+    font-size: 26px;
+  }
+  .others {
+    text-align: center;
+  }
+  .list {
+    justify-content: center;
+  }
+  .others a {
+    margin-right: 4%;
+    width: 48%;
+  }
+  .others a:last-of-type {
+    margin-right: 0;
+  }
+  .service {
+    padding: 10px 1rem;
+    width: 100%;
+    font-size: 14px;
+  }
+  .service svg {
+    width: 36px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .others a {
+    margin-right: 0;
+    width: fit-content;
+    min-width: 300px;
+  }
+}

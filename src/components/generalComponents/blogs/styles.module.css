@@ -10,7 +10,48 @@
 .blogList {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .blogList > div {
   margin-right: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .ttl {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .blogList > div {
+    margin-bottom: 3rem;
+  }
+  .blogList > div {
+    margin-right: 4%;
+  }
+  .blogList > div:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ttl {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blogList {
+    justify-content: center;
+  }
+  .blogList > div {
+    margin-bottom: 3rem;
+  }
+  .blogList > div {
+    margin-right: 0;
+  }
+  .ttl {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 }

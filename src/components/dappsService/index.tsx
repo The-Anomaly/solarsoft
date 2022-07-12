@@ -6,15 +6,26 @@ import { Routes } from "router";
 import styles from "./styles.module.css";
 
 const DappsServiceUI = () => {
+  const [mobile, setMobile] = React.useState(window.innerWidth <= 900 ? true : false);
+
+  const checkWidth = () => {
+    if (window.innerWidth <= 800) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  };
+  window.onresize = checkWidth;
+
   const services: OtherService[] = [
     {
       Icon: SmartContractIcon2,
-      text: "Smart Contract Development",
+      text: mobile ? "Smart Contract" : "Smart Contract Development",
       link: Routes.contractService,
     },
     {
       Icon: NftIcon2,
-      text: "Blockchain for Non-Fungible Tokens",
+      text: mobile ? "Non-Fungible Tokens" : "Blockchain for Non-Fungible Tokens",
       link: Routes.nftService,
     },
   ];

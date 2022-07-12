@@ -1,8 +1,21 @@
+import { CaretDown, kryptoAlienz1, kryptoAlienz2, kryptoAlienz3 } from "assets";
 import { Button } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
 
 const ServiceDetails = () => {
+  const [active, setActive] = React.useState(0);
+  const alienz = [kryptoAlienz1, kryptoAlienz2, kryptoAlienz3];
+
+  const left = () => {
+    setActive((prev) => (prev === 0 ? 0 : prev - 1));
+  };
+
+  const right = () => {
+    setActive((prev) => (prev <= 2 ? prev + 1 : 0));
+  };
+
+  console.log(active);
   return (
     <section className={`siteWrapper ${styles.wrapper}`}>
       <h2 className={styles.ttl}>Non-Fungible Tokens (NFTs)</h2>
@@ -45,6 +58,31 @@ const ServiceDetails = () => {
         <p className={styles.largeTxt}>
           Heroes of Kronos, Krypto Alienz and Alta are some of the in-house NFT collections we have worked on.
         </p>
+      </div>
+      <div className={styles.kronos}>
+        <button onClick={left} className={`${styles.leftCtrl} ${styles.ctrlMobile}`}>
+          <CaretDown />
+        </button>
+        <div className={styles.imgSec}>
+          {alienz.map((item, index) =>
+            index === active ? <img className={styles.img} src={item} key={index} alt="" /> : "",
+          )}
+          <p className={styles.imgDescrip}>Krypto Aliens by HlyTobi</p>
+        </div>
+        <button onClick={right} className={`${styles.rightCtrl} ${styles.ctrlMobile}`}>
+          <CaretDown />
+        </button>
+
+        <div className={styles.ctrlDesktop}>
+          <button onClick={left} className={styles.leftCtrl}>
+            <CaretDown />
+          </button>
+          <button onClick={right} className={styles.rightCtrl}>
+            <CaretDown />
+          </button>
+        </div>
+      </div>
+      <div className={styles.info}>
         <p className={styles.bottom1}> Krypto Alienz is an NFT collection that consists of 3,333 Alienz.</p>
         <p className={styles.bottom2}>
           We worked on the design, product description, NFT custom smart contract, branding asset designs, metadata,
