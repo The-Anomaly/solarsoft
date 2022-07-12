@@ -1,5 +1,5 @@
 import { ArrowRight } from "assets";
-import { BlogCard, Button } from "components";
+import { Button, BlogCard } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
 

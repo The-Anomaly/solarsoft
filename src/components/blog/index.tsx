@@ -1,5 +1,5 @@
 import { blogImage } from "assets";
-import { BlogCard } from "components/generalComponents";
+import { BlogCard } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
 
