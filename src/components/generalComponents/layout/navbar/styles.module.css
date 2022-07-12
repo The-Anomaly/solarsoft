@@ -169,3 +169,18 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 1.5rem 1rem;
+  }
+  .mobileNavItems {
+    padding: 0 1rem;
+  }
+  .menuBtnClose {
+    width: 20px;
+  }
+  .menuBtn {
+    width: 28px;
+  }
+}
