@@ -38,3 +38,134 @@
   top: 36px;
   z-index: 1;
 }
+.mobileNav {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .logo {
+    width: 120px;
+  }
+  .navItems {
+    font-size: 12px;
+    max-width: 400px;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logo {
+    width: 120px;
+  }
+  .nav {
+    display: none;
+  }
+  .navBg {
+    background: #090c10;
+  }
+  .openNav {
+    height: 100vh;
+  }
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background: var(--black);
+  }
+  .menuBtn {
+    width: 32px;
+  }
+  .menuBtnClose {
+    width: 24px;
+  }
+  .mobileNavItems {
+    padding: 0 1.5rem;
+    max-height: calc(100vh - 165px);
+    overflow: hidden scroll;
+    animation-name: showNav;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+  .mobileNavItems::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .mobileNavItem {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #1e2029;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  a.mobileNavItem:last-of-type {
+    border-bottom: none;
+  }
+  .dropdown {
+    width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdownItem {
+    color: inherit;
+    text-decoration: none;
+    margin-top: 1.7rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    animation-name: showDropdown;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+  }
+  .dropdownItem svg {
+    width: 24px;
+    margin-right: 12px;
+  }
+  .partners {
+    background: var(--black);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .partners svg:nth-of-type(1) {
+    max-width: 150px;
+    width: 40%;
+  }
+  .partners svg:nth-of-type(2) {
+    width: 16%;
+    max-width: 60px;
+  }
+  .partners svg:nth-of-type(3) {
+    width: 13%;
+    max-width: 50px;
+  }
+}
+@keyframes showDropdown {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 1.7rem;
+  }
+}
+@keyframes showNav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

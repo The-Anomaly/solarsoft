@@ -28,8 +28,14 @@ import { ReactComponent as MinusIcon } from "./minusIcon.svg";
 import { ReactComponent as NftHero } from "./nftHero.svg";
 import { ReactComponent as ContractHero } from "./contractHero.svg";
 import { ReactComponent as DappsHero } from "./dappsHero.svg";
+import { ReactComponent as HamburgerMenu } from "./hamburgerMenu.svg";
+import { ReactComponent as MenuClose } from "./menuClose.svg";
+import { ReactComponent as CaretDown } from "./caretDown.svg";
 
 export {
+  CaretDown,
+  HamburgerMenu,
+  MenuClose,
   NftHero,
   ContractHero,
   DappsHero,

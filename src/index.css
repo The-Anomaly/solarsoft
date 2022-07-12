@@ -76,3 +76,7 @@ svg {
   padding-left: var(--site-max-pad);
   padding-right: var(--site-max-pad);
 }
+
+[role=button] {
+  cursor: pointer;
+}

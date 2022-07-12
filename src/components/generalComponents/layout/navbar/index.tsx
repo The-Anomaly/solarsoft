@@ -1,11 +1,18 @@
 import {
+  CaretDown,
   DappsIcon,
+  DappsIcon2,
+  HamburgerMenu,
   Logo,
+  MenuClose,
   NebulaMusicIcon,
   NebulaWalletIcon,
   NftIcon,
+  ProdMania,
   SmartContractIcon,
   SolarsoftUniIcon,
+  StudentPaddy,
+  TSE,
 } from "assets";
 import { Button, Dropdown, DropdownItem } from "components";
 import * as React from "react";
@@ -39,6 +46,8 @@ const NavItem: React.FC<NavItemProps> = ({ text, link, type, items }) => {
 
 const NavBar = () => {
   const navigate = useNavigate();
+  const [active, setActive] = React.useState("");
+  const [showNav, setShowNav] = React.useState(false);
   const services: DropdownItem[] = [
     {
       Icon: SmartContractIcon,
@@ -122,9 +131,14 @@ const NavBar = () => {
     },
   ];
 
+  const closeNav = () => {
+    setActive("");
+    setShowNav(false);
+  };
+
   return (
     <>
-      <nav className={styles.navBg}>
+      <nav className={`${styles.navBg} ${showNav ? styles.openNav : ""}`}>
         <div className={`siteWrapper ${styles.nav}`}>
           <Logo className={styles.logo} />
           <div className={styles.navItems}>
@@ -135,6 +149,90 @@ const NavBar = () => {
           <Button onClick={() => navigate(Routes.contactUs)} type="light" className={styles.btn}>
             Contact Us
           </Button>
+        </div>
+        <div className={styles.mobileNav}>
+          <div className={styles.header}>
+            <Logo className={styles.logo} />
+            {!showNav ? (
+              <HamburgerMenu onClick={() => setShowNav(true)} role="button" className={styles.menuBtn} />
+            ) : (
+              <MenuClose onClick={() => setShowNav(false)} role="button" className={styles.menuBtnClose} />
+            )}
+          </div>
+          {showNav ? (
+            <>
+              <div className={styles.mobileNavItems}>
+                <Link to={Routes.home} onClick={closeNav} className={styles.mobileNavItem}>
+                  <p>Home</p>
+                </Link>
+                <div className={styles.mobileNavItem}>
+                  <p>Products</p>{" "}
+                  <CaretDown role="button" onClick={() => setActive(active === "products" ? "" : "products")} />
+                  {active === "products" ? (
+                    <div className={styles.dropdown}>
+                      <a href="" className={styles.dropdownItem}>
+                        <NebulaWalletIcon /> Nebula Wallet
+                      </a>
+                      <a href="" className={styles.dropdownItem}>
+                        <NebulaMusicIcon /> Nebula Music
+                      </a>
+                      <a href="" className={styles.dropdownItem}>
+                        <DappsIcon2 /> Solarsoft University
+                      </a>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div className={styles.mobileNavItem}>
+                  <p>Services</p>{" "}
+                  <CaretDown role="button" onClick={() => setActive(active === "services" ? "" : "services")} />
+                  {active === "services" ? (
+                    <div className={styles.dropdown}>
+                      <Link onClick={closeNav} to={Routes.contractService} className={styles.dropdownItem}>
+                        Smart Contracts
+                      </Link>
+                      <Link onClick={closeNav} to={Routes.nftService} className={styles.dropdownItem}>
+                        Non-Fungible Tokens
+                      </Link>
+                      <Link onClick={closeNav} to={Routes.dappsService} className={styles.dropdownItem}>
+                        Decentralized Apps
+                      </Link>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div className={styles.mobileNavItem}>
+                  <p>Resources</p>
+                  <CaretDown role="button" onClick={() => setActive(active === "resources" ? "" : "resources")} />
+                  {active === "resources" ? (
+                    <div className={styles.dropdown}>
+                      <Link onClick={closeNav} to={Routes.blog} className={styles.dropdownItem}>
+                        Blog
+                      </Link>
+                      <a href="" className={styles.dropdownItem}>
+                        API Docs
+                      </a>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <Link onClick={closeNav} to={Routes.aboutUs} className={styles.mobileNavItem}>
+                  <p>Company</p>
+                </Link>
+                <Link onClick={closeNav} to={Routes.contactUs} className={styles.mobileNavItem}>
+                  <p>Contact Us</p>
+                </Link>{" "}
+              </div>
+              <div className={styles.partners}>
+                <ProdMania /> <StudentPaddy /> <TSE />
+              </div>
+            </>
+          ) : (
+            ""
+          )}
         </div>
       </nav>
     </>

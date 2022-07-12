@@ -5,6 +5,7 @@
   display: grid;
   grid-template-areas:
     "a b"
+    ". d"
     "c .";
   grid-template-columns: 1.4fr 1fr;
   padding-top: 60px;
@@ -74,9 +75,88 @@
   margin-top: 1.8rem;
   display: flex;
   align-items: center;
+  grid-area: d;
+  margin-top: -3rem;
 }
 .socials a {
   margin-right: 1rem;
 }
 .socials svg {
+}
+
+@media screen and (max-width: 1000px) {
+  .ttl,
+  .items {
+    font-size: 14px;
+  }
+  .footer {
+    grid-template-columns: 1.1fr 1fr;
+  }
+  .links {
+    max-width: 450px;
+  }
+  .input {
+    height: 40px;
+    font-size: 14px;
+  }
+  .btn {
+    height: 40px;
+    font-size: 14px;
+  }
+  .subscribe {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-areas: "b" "a" "d" "c";
+    text-align: center;
+    padding-bottom: 3rem;
+    gap: 2rem;
+    width: 80%;
+  }
+  .links {
+    max-width: unset;
+    flex-direction: column;
+  }
+  .links > div {
+    margin-bottom: 2rem;
+  }
+  .links > div:last-child {
+    margin-bottom: 0;
+  }
+  .form {
+    flex-direction: column;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .txt {
+    width: 100%;
+  }
+  .ttl {
+    margin-bottom: 1rem;
+  }
+  .socials {
+    width: 200px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: -1rem;
+  }
+  .socials a {
+    margin: 0;
+  }
+  .socials svg {
+    width: 20px;
+  }
 }
