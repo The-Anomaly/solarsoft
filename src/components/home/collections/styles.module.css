@@ -21,7 +21,7 @@
   justify-content: center;
 }
 .imgSec {
-  width: 40%;
+  width: 45%;
   position: relative;
   text-align: right;
 }
@@ -51,7 +51,7 @@
 .imageSlide {
   animation-name: roll-in;
   animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0.26, 0.44, 0.48, 1.1);
+  animation-timing-function: cubic-bezier(0.26, 0.44, 0.48, 1.11);
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -60,6 +60,10 @@
 }
 .imgSec > div {
   min-height: 400px;
+}
+.krypto2 {
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.26, 0.44, 0.27, 1.2);
 }
 
 @keyframes roll-in {
