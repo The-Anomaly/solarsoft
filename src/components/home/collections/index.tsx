@@ -125,25 +125,23 @@ const NFTCollection = () => {
   const right = () => {
     setActiveImg((prev) => (prev < 2 ? prev + 1 : 2));
   };
-  console.log(activeImg)
+
   return (
     <section className={styles.collectionBg}>
       <div className={`siteWrapper ${styles.collectionWrap}`}>
         <h3 className={styles.ttl}>Explore our NFT collections</h3>
         <div className={styles.collection}>
           <div className={styles.imgSec}>
-            {active === 1 ? (
+            <div>
               <>
                 <img src={alta2} className={`${styles.krypto2} ${active === 1 ? styles.imageSlide : ""}`} alt="" />
                 <img src={alta1} className={`${styles.krypto1} ${active === 1 ? styles.imageSlide : ""}`} alt="" />
               </>
-            ) : active === 2 ? (
               <>
                 <img src={kronos3} className={`${styles.krypto3} ${active === 2 ? styles.imageSlide : ""}`} alt="" />
                 <img src={kronos2} className={`${styles.krypto2} ${active === 2 ? styles.imageSlide : ""}`} alt="" />
                 <img src={kronos1} className={`${styles.krypto1} ${active === 2 ? styles.imageSlide : ""}`} alt="" />
               </>
-            ) : active === 3 ? (
               <>
                 <img
                   src={kryptoAlienz3}
@@ -161,13 +159,11 @@ const NFTCollection = () => {
                   alt=""
                 />
               </>
-            ) : active === 4 ? (
               <>
                 <img src={duckz3} className={`${styles.krypto3} ${active === 4 ? styles.imageSlide : ""}`} alt="" />
                 <img src={duckz2} className={`${styles.krypto2} ${active === 4 ? styles.imageSlide : ""}`} alt="" />
                 <img src={duckz1} className={`${styles.krypto1} ${active === 4 ? styles.imageSlide : ""}`} alt="" />
               </>
-            ) : active === 5 ? (
               <>
                 <img
                   src={kryptoAlienz3}
@@ -185,14 +181,12 @@ const NFTCollection = () => {
                   alt=""
                 />
               </>
-            ) : (
-              ""
-            )}
-
+            </div>
             <Button type="transparent" onClick={() => {}} className={styles.btn} Icon={ArrowRight}>
               View in marketplace{" "}
             </Button>
           </div>
+
           <div className={styles.txtSec}>
             {collectionList.map((item, index) => (
               <CollectionInfo {...item} key={index} active={active} />
@@ -206,9 +200,14 @@ const NFTCollection = () => {
                 <CaretDown />
               </button>
               <div className={styles.imgSecMobile}>
-                {alienz.map((item, index) =>
-                  index === activeImg ? <img className={styles.img} src={item} key={index} alt="" /> : "",
-                )}
+                {alienz.map((item, index) => (
+                  <img
+                    className={`${styles.img} ${index === activeImg ? styles.showImg : ""}`}
+                    src={item}
+                    key={index}
+                    alt=""
+                  />
+                ))}
               </div>
               <button onClick={right} className={`${styles.rightCtrl} ${styles.ctrlMobile}`}>
                 <CaretDown />

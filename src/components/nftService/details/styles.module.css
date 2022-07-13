@@ -82,6 +82,10 @@
 }
 .img {
   width: 100%;
+  display: none;
+}
+.showImg {
+  display: block !important;
 }
 .imgDescrip {
   color: #bfc1cc;

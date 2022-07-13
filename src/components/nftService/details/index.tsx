@@ -64,9 +64,9 @@ const ServiceDetails = () => {
           <CaretDown />
         </button>
         <div className={styles.imgSec}>
-          {alienz.map((item, index) =>
-            index === active ? <img className={styles.img} src={item} key={index} alt="" /> : "",
-          )}
+          {alienz.map((item, index) => (
+            <img className={`${styles.img} ${index === active ? styles.showImg : ""}`} src={item} key={index} alt="" />
+          ))}
           <p className={styles.imgDescrip}>Krypto Aliens by HlyTobi</p>
         </div>
         <button onClick={right} className={`${styles.rightCtrl} ${styles.ctrlMobile}`}>

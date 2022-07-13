@@ -39,7 +39,7 @@
 }
 
 .krypto1 {
-  position: relative !important;
+  /* position: relative !important; */
 }
 .krypto2 {
   transform: rotate(-4.92deg);
@@ -53,15 +53,22 @@
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.26, 0.44, 0.48, 1.1);
   animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.imgSec img {
+  right: 50vw;
+}
+.imgSec > div {
+  min-height: 400px;
 }
 
 @keyframes roll-in {
   0% {
-    left: -50vw;
+    right: 50vw;
     transform: rotate(-15deg);
   }
   100% {
-    left: 0;
+    right: 0;
   }
 }
 
@@ -109,6 +116,14 @@
 @media screen and (max-width: 1200px) {
   .ttl {
     font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .imgSec > div {
+    min-height: 350px;
+  }
+  .collection {
+    justify-content: space-between;
   }
 }
 @media screen and (max-width: 800px) {
@@ -159,6 +174,10 @@
   }
   .imgSecMobile img {
     width: 100%;
+    display: none;
+  }
+  .showImg {
+    display: block !important;
   }
   .collectionMobileItem {
     margin: auto;
