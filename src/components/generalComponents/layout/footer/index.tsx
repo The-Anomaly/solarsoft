@@ -1,6 +1,8 @@
 import { DiscordIcon, TwitterIcon, InstagramIcon, LinkedinIcon, MediumIcon } from "assets";
 import { Button } from "components";
 import * as React from "react";
+import { Link } from "react-router-dom";
+import { Routes } from "router";
 import styles from "./styles.module.css";
 
 const Footer = () => {
@@ -10,22 +12,34 @@ const Footer = () => {
         <div>
           <p className={styles.ttl}>Products</p>
           <ul className={styles.items}>
-            <li>Nebula Wallet</li>
-            <li>Nebula Music</li>
-            <li>Solarsoft University</li>
+            <li>
+              <a>Nebula Wallet</a>
+            </li>
+            <li>
+              <a>Nebula Music</a>
+            </li>
+            <li>
+              <a>Solarsoft University</a>
+            </li>
           </ul>
         </div>
         <div>
           <p className={styles.ttl}>Quick Links</p>
           <ul className={styles.items}>
-            <li>Contact</li>
-            <li>Blog</li>
+            <li>
+              <Link to={Routes.contactUs}>Contact</Link>
+            </li>
+            <li>
+              <Link to={Routes.blog}>Blog</Link>
+            </li>
           </ul>
         </div>
         <div>
           <p className={styles.ttl}>Support</p>
           <ul className={styles.items}>
-            <li>API Documentation</li>
+            <li>
+              <a>API Documentation</a>
+            </li>
           </ul>
         </div>
       </div>
