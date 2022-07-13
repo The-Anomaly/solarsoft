@@ -31,3 +31,51 @@
   width: 60%;
   max-width: 664px;
 }
+
+@media screen and (max-width: 1000px) {
+  .img {
+    width: 50%;
+  }
+  .txtSec {
+    width: 50%;
+  }
+  .ttl {
+    font-size: 30px;
+    max-width: 240px;
+  }
+  .txt {
+    font-size: 16px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ttl {
+    font-size: 24px;
+    max-width: 200px;
+  }
+  .apiSec {
+    padding: 2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .apiSec {
+    border-radius: 0;
+    width: 100vw;
+    margin-left: -1rem;
+    flex-direction: column-reverse;
+    overflow: hidden;
+    padding: 2rem 1rem 3.5rem;
+  }
+  .txtSec {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .img {
+    width: 120%;
+    margin-right: -20%;
+  }
+}

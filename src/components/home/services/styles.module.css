@@ -64,3 +64,58 @@
 .partners svg {
   width: 47%;
 }
+@media screen and (max-width: 1200px) {
+  .ttl {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .txt1 {
+    margin-bottom: 5rem;
+  }
+  .serviceList {
+    flex-direction: column;
+  }
+  .service {
+    margin-bottom: 3rem;
+  }
+  .serviceTxt {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .serviceIcon {
+    margin-bottom: 2rem;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ttl {
+    font-size: 2.2rem;
+  }
+  .txt1 {
+    font-size: 16px;
+    max-width: 600px;
+  }
+  .serviceTtl {
+    font-size: 24px;
+  }
+  .serviceTxt {
+    font-size: 15px;
+    max-width: 300px;
+  }
+  .partners {
+    display: none;
+  }
+  .serviceList {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ttl {
+    font-size: 2rem;
+  }
+}

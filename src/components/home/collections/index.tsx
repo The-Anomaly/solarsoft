@@ -4,6 +4,7 @@ import {
   alta1,
   alta2,
   ArrowRight,
+  CaretDown,
   duckz1,
   duckz2,
   duckz3,
@@ -39,6 +40,7 @@ const CollectionInfo: React.FC<CollectionInfoProps> = ({ active, state, changeAc
 
 const NFTCollection = () => {
   const [active, setActive] = React.useState(1);
+  const [activeImg, setActiveImg] = React.useState(0);
 
   const collectionList: CollectionInfoProps[] = [
     {
@@ -113,6 +115,17 @@ const NFTCollection = () => {
       ),
     },
   ];
+
+  const alienz = [kryptoAlienz1, kryptoAlienz2, kryptoAlienz3];
+
+  const left = () => {
+    setActiveImg((prev) => (prev === 0 ? 0 : prev - 1));
+  };
+
+  const right = () => {
+    setActiveImg((prev) => (prev < 2 ? prev + 1 : 2));
+  };
+  console.log(activeImg)
   return (
     <section className={styles.collectionBg}>
       <div className={`siteWrapper ${styles.collectionWrap}`}>
@@ -132,9 +145,21 @@ const NFTCollection = () => {
               </>
             ) : active === 3 ? (
               <>
-                <img src={kryptoAlienz3} className={`${styles.krypto3} ${active === 3 ? styles.imageSlide : ""}`} alt="" />
-                <img src={kryptoAlienz2} className={`${styles.krypto2} ${active === 3 ? styles.imageSlide : ""}`} alt="" />
-                <img src={kryptoAlienz1} className={`${styles.krypto1} ${active === 3 ? styles.imageSlide : ""}`} alt="" />
+                <img
+                  src={kryptoAlienz3}
+                  className={`${styles.krypto3} ${active === 3 ? styles.imageSlide : ""}`}
+                  alt=""
+                />
+                <img
+                  src={kryptoAlienz2}
+                  className={`${styles.krypto2} ${active === 3 ? styles.imageSlide : ""}`}
+                  alt=""
+                />
+                <img
+                  src={kryptoAlienz1}
+                  className={`${styles.krypto1} ${active === 3 ? styles.imageSlide : ""}`}
+                  alt=""
+                />
               </>
             ) : active === 4 ? (
               <>
@@ -144,9 +169,21 @@ const NFTCollection = () => {
               </>
             ) : active === 5 ? (
               <>
-                 <img src={kryptoAlienz3} className={`${styles.krypto3} ${active === 5 ? styles.imageSlide : ""}`} alt="" />
-                <img src={kryptoAlienz2} className={`${styles.krypto2} ${active === 5 ? styles.imageSlide : ""}`} alt="" />
-                <img src={kryptoAlienz1} className={`${styles.krypto1} ${active === 5 ? styles.imageSlide : ""}`} alt="" />
+                <img
+                  src={kryptoAlienz3}
+                  className={`${styles.krypto3} ${active === 5 ? styles.imageSlide : ""}`}
+                  alt=""
+                />
+                <img
+                  src={kryptoAlienz2}
+                  className={`${styles.krypto2} ${active === 5 ? styles.imageSlide : ""}`}
+                  alt=""
+                />
+                <img
+                  src={kryptoAlienz1}
+                  className={`${styles.krypto1} ${active === 5 ? styles.imageSlide : ""}`}
+                  alt=""
+                />
               </>
             ) : (
               ""
@@ -160,6 +197,27 @@ const NFTCollection = () => {
             {collectionList.map((item, index) => (
               <CollectionInfo {...item} key={index} active={active} />
             ))}
+          </div>
+        </div>
+        <div className={styles.collectionMobile}>
+          <div className={styles.collectionMobileItem}>
+            <div className={styles.kronos}>
+              <button onClick={left} className={`${styles.leftCtrl} ${styles.ctrlMobile}`}>
+                <CaretDown />
+              </button>
+              <div className={styles.imgSecMobile}>
+                {alienz.map((item, index) =>
+                  index === activeImg ? <img className={styles.img} src={item} key={index} alt="" /> : "",
+                )}
+              </div>
+              <button onClick={right} className={`${styles.rightCtrl} ${styles.ctrlMobile}`}>
+                <CaretDown />
+              </button>
+            </div>
+            <CollectionInfo {...collectionList[2]} active={3} />
+            <Button type="transparent" onClick={() => {}} className={styles.btn} Icon={ArrowRight}>
+              View in marketplace
+            </Button>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ const ServiceDetails = () => {
   };
 
   const right = () => {
-    setActive((prev) => (prev <= 2 ? prev + 1 : 0));
+    setActive((prev) => (prev < 2 ? prev + 1 : 2));
   };
 
   console.log(active);

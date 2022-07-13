@@ -12,6 +12,7 @@
 .blogList {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .blogList > div:nth-child(2) {
   margin-top: 4.5rem;
@@ -28,4 +29,54 @@ button.btn {
 }
 .btn svg path {
   fill: var(--white);
+}
+
+@media screen and (max-width: 1200px) {
+  .ttl {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .blogList {
+    justify-content: flex-start;
+  }
+  .blogList > div {
+    margin-right: 4%;
+    margin-top: 0 !important;
+    margin-bottom: 3rem;
+  }
+  .blogList > div:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .ttl {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+  }
+  .blogList > div {
+    margin-top: 0 !important;
+  }
+  .btn {
+    margin: 0 auto !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ttl {
+    font-size: 2rem;
+  }
+  .blogList {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .ttl {
+    font-size: 2rem;
+  }
+  .btn {
+    margin-left: 0 !important;
+    padding-left: 0;
+  }
 }
