@@ -18,17 +18,18 @@
   margin-bottom: 1.2rem;
 }
 .txt {
-  width: 80%;
-  font-size: 17px;
+  width: 90%;
+  font-size: 15px;
   font-weight: 300;
   line-height: 1.8;
   margin-bottom: 2.2rem;
+  max-width: 350px;
 }
 .btn {
   padding: 14px 24px;
 }
 .img {
-  width: 60%;
+  width: 61%;
   max-width: 664px;
 }
 
@@ -42,10 +43,6 @@
   .ttl {
     font-size: 30px;
     max-width: 240px;
-  }
-  .txt {
-    font-size: 16px;
-    width: 90%;
   }
 }
 
@@ -77,5 +74,8 @@
   .img {
     width: 120%;
     margin-right: -20%;
+  }
+  .txt {
+    font-size: 14px;
   }
 }

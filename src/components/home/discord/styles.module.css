@@ -36,10 +36,10 @@ button.btn {
   border: none;
 }
 .btn:hover {
-  color: var(--blue) !important;
+  color: var(--white) !important;
 }
 .btn:hover svg path {
-  fill: var(--blue)
+  fill: var(--white)
 }
 @media screen and (max-width: 1000px) {
   .ttl {

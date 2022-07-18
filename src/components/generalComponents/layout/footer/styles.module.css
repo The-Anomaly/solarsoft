@@ -89,7 +89,13 @@
 }
 .socials svg {
 }
-
+.notAllowed {
+  opacity: 0.1;
+  cursor: default;
+}
+.notAllowed:hover {
+  color: var(--white) !important;
+}
 @media screen and (max-width: 1000px) {
   .footer {
     grid-template-columns: 1.1fr 1fr;

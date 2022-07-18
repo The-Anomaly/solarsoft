@@ -39,13 +39,13 @@ const Services = () => {
   const navigate = useNavigate();
   const service: ServiceProp[] = [
     {
-      Icon: <SmartContractIcon2 className={`${styles.serviceIcon} ${styles.smartcontract}`} />,
+      Icon: <SmartContractIcon2 className={styles.serviceIcon} />,
       title: "Smart Contracts",
       text: "Self-executing code to make your business easier",
       action: () => navigate(Routes.contractService),
     },
     {
-      Icon: <NftIcon2 className={`${styles.serviceIcon} ${styles.nft}`} />,
+      Icon: <NftIcon2 className={styles.serviceIcon} />,
       title: "NFTs",
       text: "Create your collection. Design, mint and trade your NFTs",
       action: () => navigate(Routes.nftService),

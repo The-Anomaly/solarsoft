@@ -17,12 +17,12 @@ const Footer = () => {
                 Nebula Wallet
               </a>
             </li>
-            {/* <li>
-              <a>Nebula Music</a>
-            </li> */}
-            {/* <li>
-              <a>Solarsoft University</a>
-            </li> */}
+            <li>
+              <a className={styles.notAllowed}>Nebula Music</a>
+            </li>
+            <li>
+              <a className={styles.notAllowed}>Solarsoft University</a>
+            </li>
           </ul>
         </div>
         <div>

@@ -1,4 +1,4 @@
-import { ArrowRight, LandingHero1, LandingHero2, ProdMania, StudentPaddy, TSE } from "assets";
+import { ArrowRight, landingHero1Img, landingHero2Img, ProdMania, StudentPaddy, TSE } from "assets";
 import { Button } from "components";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
@@ -46,8 +46,8 @@ const HeroSection: React.FC<HeroProps> = ({ type, title, text, label, className,
             <Image className={styles.heroImg} />
           ) : (
             <>
-              <LandingHero1 className={styles.img2} />
-              <LandingHero2 className={styles.img1} />
+              <img src={landingHero1Img} alt="" className={styles.img2} />
+              <img src={landingHero2Img} alt="" className={styles.img1} />
             </>
           )}
         </div>

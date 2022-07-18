@@ -16,6 +16,8 @@ import amaku from "./amaku.png";
 import ifere from "./ifere.png";
 import moore from "./moore.png";
 import nfts from "./nfts.png";
+import landingHero2Img from "./landingHero2Img.png";
+import landingHero1Img from "./landingHero1Img.png";
 
 export {
   amaku,
@@ -35,5 +37,7 @@ export {
   blogImage,
   apiCode,
   aboutHeroImg,
-  nfts
+  nfts,
+  landingHero2Img,
+  landingHero1Img,
 };

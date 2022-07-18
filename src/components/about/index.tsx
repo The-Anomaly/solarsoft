@@ -29,7 +29,7 @@ const AboutUI = () => {
       ),
       image: moore,
       role: "CTO/Co-Founder",
-      twitter: "",
+      twitter: "https://twitter.com/MOORE_DH?s=20&t=cEm-hsNiU4pMLWidy8xVeA",
       linkedin: "https://www.linkedin.com/in/moore-dagogo-hart-33b419164",
     },
     {
