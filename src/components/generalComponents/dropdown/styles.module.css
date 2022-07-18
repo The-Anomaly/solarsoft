@@ -1,12 +1,12 @@
 .dropdownWrap {
   width: fit-content;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   background: #12171f;
-  width: 350px;
+  width: 330px;
   position: absolute;
   font-weight: 400;
   left: 0;
-  display: none;
 }
 .item {
   padding: 14px;
@@ -23,7 +23,6 @@
   color: var(--secondaryText);
   line-height: 1.5;
   margin-top: 8px;
-  max-width: 250px;
 }
 .item:hover {
   background: #141b25;

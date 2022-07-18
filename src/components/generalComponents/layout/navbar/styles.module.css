@@ -8,8 +8,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: var(--site-max-pad);
-  padding-bottom: var(--site-max-pad);
 }
 .logo {
   width: 150px;
@@ -22,6 +20,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: 13px;
+  height: 74px;
 }
 .navItem {
   color: inherit;
@@ -29,14 +28,25 @@
   position: relative;
   cursor: pointer;
   padding: 10px 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .btn {
   padding: 14px 22px;
 }
+.navItem .list {
+  top: 50px;
+  visibility: hidden;
+  opacity: 0;
+}
+.navItem:hover {
+  color: var(--secondaryText);
+}
 .navItem:hover .list {
-  display: block !important;
-  top: 36px;
-  z-index: 1;
+  top: 74px;
+  visibility: visible;
+  opacity: 1;
 }
 .mobileNav {
   display: none;
