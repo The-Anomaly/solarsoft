@@ -1,4 +1,4 @@
-import { ArrowRight, ProdMania, StudentPaddy, TSE } from "assets";
+import { ArrowRight, LandingHero1, LandingHero2, ProdMania, StudentPaddy, TSE } from "assets";
 import { Button } from "components";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +19,7 @@ interface HeroProps {
 }
 
 const HeroSection: React.FC<HeroProps> = ({ type, title, text, label, className, Image }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <section className={`${styles.heroBg} ${styles[type]} ${className}`}>
       <div className={`siteWrapper ${styles.hero}`}>
@@ -41,7 +41,16 @@ const HeroSection: React.FC<HeroProps> = ({ type, title, text, label, className,
             ""
           )}
         </div>
-        <div className={styles.imgSec}>{Image ? <Image className={styles.heroImg} /> : ""}</div>
+        <div className={styles.imgSec}>
+          {Image ? (
+            <Image className={styles.heroImg} />
+          ) : (
+            <>
+              <LandingHero1 className={styles.img2} />
+              <LandingHero2 className={styles.img1} />
+            </>
+          )}
+        </div>
       </div>
     </section>
   );

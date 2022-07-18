@@ -97,6 +97,10 @@
   line-height: 1.8;
   display: none;
 }
+.activeCollection {
+  position: relative;
+  animation: moveUp 0.3s ease-out;
+}
 .activeCollection .collectionTtl {
   font-weight: 700;
   font-size: 23px;
@@ -111,6 +115,14 @@
 }
 .collectionMobile {
   display: none;
+}
+@keyframes moveUp {
+  0% {
+    top: -2rem;
+  }
+  100% {
+    top: 0;
+  }
 }
 @media screen and (max-width: 1200px) {
   .ttl {
