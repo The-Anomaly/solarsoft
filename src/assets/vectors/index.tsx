@@ -31,8 +31,16 @@ import { ReactComponent as DappsHero } from "./dappsHero.svg";
 import { ReactComponent as HamburgerMenu } from "./hamburgerMenu.svg";
 import { ReactComponent as MenuClose } from "./menuClose.svg";
 import { ReactComponent as CaretDown } from "./caretDown.svg";
+import { ReactComponent as AlchemyLogo } from "./alchemyLogo.svg";
+import { ReactComponent as MagicEdenLogo } from "./magicEdenLogo.svg";
+import { ReactComponent as ChainLinkLogo } from "./chainLinkLogo.svg";
+import { ReactComponent as NebulaLogo } from "./nebulaLogo.svg";
 
 export {
+  AlchemyLogo,
+  MagicEdenLogo,
+  ChainLinkLogo,
+  NebulaLogo,
   CaretDown,
   HamburgerMenu,
   MenuClose,

@@ -26,6 +26,7 @@
 }
 .faqItem {
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 .activeItem {
   background: #131b27;
@@ -43,7 +44,6 @@
   cursor: pointer;
   font-weight: 200;
   font-size: 19px;
-  margin-bottom: 8px;
 }
 .faqBtn span {
   width: 80%;
@@ -51,35 +51,23 @@
   word-break: break-all;
 }
 .faqBody {
-  padding: 1.2rem;
+  padding: 0 1.2rem;
   line-height: 2;
   font-size: 15px;
   font-weight: 200;
   width: 87%;
-  display: none;
-  animation-name: hideFaq;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease-out;
 }
 .activeItem .faqBody {
-  display: block;
-  animation-name: showFaq;
-  animation-duration: 0.25s;
-  animation-timing-function: linear;
+  height: auto;
 }
-@keyframes hideFaq {
-  0% {
-    padding: 1.2rem;
-  }
-  100% {
-    padding: 0 1.2rem;
-  }
+.inactiveItem .faqBody {
+  animation-name: hideFaq;
 }
-@keyframes showFaq {
-  0% {
-    padding: 0 1.2rem;
-  }
-  100% {
-    padding: 1.2rem;
-  }
+.faqBody div {
+  margin: 1.2rem 0;
 }
 
 @media screen and (max-width: 1000px) {

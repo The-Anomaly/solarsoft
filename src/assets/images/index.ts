@@ -15,6 +15,7 @@ import aboutHeroImg from "./aboutHeroImg.png";
 import amaku from "./amaku.png";
 import ifere from "./ifere.png";
 import moore from "./moore.png";
+import nfts from "./nfts.png";
 
 export {
   amaku,
@@ -34,4 +35,5 @@ export {
   blogImage,
   apiCode,
   aboutHeroImg,
+  nfts
 };

@@ -17,7 +17,7 @@
   width: 55%;
 }
 .ttl {
-  /* line-height: 1.4; */
+  line-height: 1.4;
   font-size: 3.2rem;
   font-weight: 500;
   margin-bottom: 1.8rem;
@@ -109,6 +109,7 @@
 .other .ttl {
   font-size: 3.6rem;
   margin-bottom: 1.4rem;
+  line-height: normal;
 }
 .other .txt {
   color: #b4b8ce;

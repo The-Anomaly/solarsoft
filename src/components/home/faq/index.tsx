@@ -16,12 +16,19 @@ interface FAQListProp {
 }
 
 const FAQItem: React.FC<FAQITemProps> = ({ active, state, changeActive, question, answer }) => {
+  const contentEl = React.useRef<HTMLDivElement>(null);
   return (
-    <div className={`${styles.faqItem} ${active === state ? styles.activeItem : ""}`}>
+    <div className={`${styles.faqItem} ${active === state ? styles.activeItem : styles.inactiveItem}`}>
       <button onClick={() => changeActive(active === state ? -1 : state)} className={styles.faqBtn}>
         <span>{question}</span> {state === active ? <MinusIcon /> : <PlusIcon />}
       </button>
-      <div className={styles.faqBody}>{answer}</div>
+      <div
+        ref={contentEl}
+        className={styles.faqBody}
+        style={active === state && contentEl.current ? { height: contentEl.current.scrollHeight } : { height: "0px" }}
+      >
+        <div>{answer}</div>
+      </div>
     </div>
   );
 };

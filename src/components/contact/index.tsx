@@ -17,7 +17,7 @@ const ContactUI = () => {
         <input type="text" placeholder="Your Company" />
         <textarea placeholder="What would you like to speak to us about?" />
         <Button className={styles.btn} type="light" onClick={() => {}}>
-          Submit Inquiry
+          Submit
         </Button>
       </form>
     </section>

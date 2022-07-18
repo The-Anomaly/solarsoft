@@ -1,4 +1,4 @@
-import { ArrowRight } from "assets";
+import { ArrowRight, NebulaLogo, nfts } from "assets";
 import { Button } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
@@ -43,6 +43,13 @@ const ServiceDetails = () => {
           will be the first multi-chain, <b>cross-chain NFT wallet</b> of its kind that allows you send multiple NFTs
           across multple blockchains in one transaction.
         </p>
+        <div className={styles.shareNft} >
+          <div>
+            <p>Store, Send & Share your NFTs</p>
+            <NebulaLogo />
+          </div>
+          <img src={nfts} alt="" />
+        </div>
         <Button type="transparent" onClick={() => {}} Icon={ArrowRight} className={styles.exploreBtn}>
           Explore Nebula Wallet
         </Button>

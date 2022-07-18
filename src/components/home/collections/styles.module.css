@@ -14,7 +14,7 @@
   color: var(--black);
   font-size: 3.7rem;
   font-weight: 500;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 .collection {
   display: flex;
@@ -24,6 +24,7 @@
   width: 45%;
   position: relative;
   text-align: right;
+  display: flex;
 }
 .txtSec {
   width: 50%;
@@ -37,39 +38,33 @@
 .mainImage {
   position: relative !important;
 }
-
-.krypto1 {
-  /* position: relative !important; */
-}
 .krypto2 {
   transform: rotate(-4.92deg);
 }
 .krypto3 {
   transform: rotate(5.96deg);
 }
-
 .imageSlide {
   animation-name: roll-in;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0.26, 0.44, 0.48, 1.11);
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.02, 0.3, 0.58, 1);
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 .imgSec img {
-  right: 50vw;
+  right: 100vw;
 }
 .imgSec > div {
   min-height: 400px;
 }
 .krypto2 {
-  animation-duration: 0.8s;
-  animation-timing-function: cubic-bezier(0.26, 0.44, 0.27, 1.2);
+  animation-duration: 0.62s;
 }
 
 @keyframes roll-in {
   0% {
-    right: 50vw;
-    transform: rotate(-15deg);
+    right: 100vw;
+    transform: rotate(25deg);
   }
   100% {
     right: 0;
@@ -77,7 +72,7 @@
 }
 
 .btn {
-  margin: 4rem auto 0;
+  margin: auto 90px 2rem auto;
   font-size: 16px;
 }
 .collectionItem {
@@ -128,6 +123,10 @@
   }
   .collection {
     justify-content: space-between;
+  }
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 800px) {

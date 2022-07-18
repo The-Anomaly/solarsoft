@@ -77,16 +77,17 @@ const NavBar = () => {
       action: () => {},
     },
     {
-      Icon: NebulaMusicIcon,
-      title: "Nebula Music",
-      text: "A decentralised music streaming protocol",
-      action: () => {},
-    },
-    {
       Icon: SolarsoftUniIcon,
       title: "Solarsoft University",
       text: "Learn about blockchain technology and NFTs",
       action: () => {},
+    },
+    {
+      Icon: NebulaMusicIcon,
+      title: "Nebula Music",
+      text: "A decentralised music streaming protocol",
+      action: () => {},
+      comingSoon: true
     },
   ];
 
@@ -174,10 +175,10 @@ const NavBar = () => {
                         <NebulaWalletIcon /> Nebula Wallet
                       </a>
                       <a href="" className={styles.dropdownItem}>
-                        <NebulaMusicIcon /> Nebula Music
+                        <SolarsoftUniIcon /> Solarsoft University
                       </a>
                       <a href="" className={styles.dropdownItem}>
-                        <DappsIcon2 /> Solarsoft University
+                        <NebulaMusicIcon /> Nebula Music  <span className={styles.comingSoon}>Coming soon</span>
                       </a>
                     </div>
                   ) : (

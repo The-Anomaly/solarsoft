@@ -23,6 +23,7 @@
   color: var(--secondaryText);
   line-height: 1.5;
   margin-top: 8px;
+  max-width: 250px;
 }
 .item:hover {
   background: #141b25;
@@ -34,4 +35,18 @@
 .item:last-of-type {
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
+}
+.comingSoon {
+  background: var(--white);
+  color: var(--blue);
+  padding: 4px 7px;
+  border-radius: 20px;
+  font-size: 8px;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-left: 8px;
+}
+.nameWrap {
+  display: flex;
+  align-items: center;
 }

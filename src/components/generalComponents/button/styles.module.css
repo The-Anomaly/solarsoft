@@ -33,3 +33,14 @@
 .btn:hover .icon {
   margin-left: 18px;
 }
+.light:hover {
+  color: #2f5fdd;
+}
+.light:hover .icon path {
+  fill: #2f5fdd;
+}
+.dark:hover {
+  color: var(--secondaryText);
+}
+.transparent:hover {
+}

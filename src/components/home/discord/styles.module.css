@@ -35,7 +35,12 @@ button.btn {
   height: 1px;
   border: none;
 }
-
+.btn:hover {
+  color: var(--blue) !important;
+}
+.btn:hover svg path {
+  fill: var(--blue)
+}
 @media screen and (max-width: 1000px) {
   .ttl {
     font-size: 2.5rem;

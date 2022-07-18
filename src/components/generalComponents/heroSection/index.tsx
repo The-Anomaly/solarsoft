@@ -1,6 +1,8 @@
 import { ArrowRight, ProdMania, StudentPaddy, TSE } from "assets";
 import { Button } from "components";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
+import { Routes } from "router";
 import styles from "./styles.module.css";
 
 interface HeroProps {
@@ -17,6 +19,7 @@ interface HeroProps {
 }
 
 const HeroSection: React.FC<HeroProps> = ({ type, title, text, label, className, Image }) => {
+  const navigate = useNavigate()
   return (
     <section className={`${styles.heroBg} ${styles[type]} ${className}`}>
       <div className={`siteWrapper ${styles.hero}`}>
@@ -24,7 +27,7 @@ const HeroSection: React.FC<HeroProps> = ({ type, title, text, label, className,
           {label ? <p className={styles.label}>{label}</p> : ""}
           <h1 className={styles.ttl}>{title}</h1>
           <p className={styles.txt}>{text}</p>
-          <Button className={styles.btn} onClick={() => {}} type="light" Icon={ArrowRight}>
+          <Button className={styles.btn} onClick={() => navigate(Routes.contactUs)} type="light" Icon={ArrowRight}>
             Speak with us
           </Button>
           {type === "landing" ? (

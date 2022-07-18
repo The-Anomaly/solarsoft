@@ -17,7 +17,7 @@
   margin-bottom: 10rem;
 }
 .serviceList {
-  margin-bottom: 8rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -40,13 +40,15 @@
   margin-bottom: 2rem;
   color: #6f7282;
 }
-.serviceBtn {
+button.serviceBtn {
   margin: auto;
   font-weight: 300;
   font-size: 12px;
   padding: 14px 20px;
 }
 .partners {
+  text-align: center;
+  padding-bottom: 10rem;
 }
 .txt2 {
   text-transform: uppercase;
@@ -55,14 +57,36 @@
   margin-bottom: 3rem;
 }
 .partners div {
-  width: 680px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .partners svg {
-  width: 47%;
+}
+.serviceBtn:hover {
+  color: var(--secondaryText);
+  background: #12171f;
+}
+.logo1 {
+  width: 18vw;
+  min-width: 18vw;
+}
+.logo2 {
+  width: 20vw;
+  min-width: 20vw;
+}
+.logo3 {
+  width: 18vw;
+  min-width: 18vw;
+}
+.logo4 {
+  width: 20vw;
+  min-width: 20vw;
+}
+.logo5 {
+  width: 15vw;
+  min-width: 15vw;
 }
 @media screen and (max-width: 1200px) {
   .ttl {
@@ -118,4 +142,33 @@
   .ttl {
     font-size: 2rem;
   }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-25vw * 7.5));
+  }
+}
+
+.slider {
+  background: transparent;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.slideTrack {
+  animation: scroll 30s linear infinite;
+  display: flex;
+  width: calc(25vw * 15);
+}
+.slide {
+  width: 25vw;
+  padding-right: 3rem;
+}
+.slide svg {
+  width: 100%;
+  min-width: unset
 }
