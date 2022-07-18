@@ -12,7 +12,12 @@ const API = () => {
           <p className={styles.txt}>
             Our API empowers developers to build and deploy high performance and scalable DApps.
           </p>
-          <Button className={styles.btn} type="light" onClick={() => {}} Icon={ArrowRight}>
+          <Button
+            className={styles.btn}
+            type="light"
+            onClick={() => window.open("https://docs.nebulawallet.io/", "_blank")}
+            Icon={ArrowRight}
+          >
             Read our api docs
           </Button>
         </div>

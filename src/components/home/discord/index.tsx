@@ -8,7 +8,7 @@ const Discord = () => {
     <section className={`siteWrapper ${styles.wrapper}`}>
       <p className={styles.ttl}>Become a friend of Solarsoft.</p>
       <p className={styles.txt}>Get first access to important news, staking, community events, upcoming drops, and more. </p>
-      <Button type="dark" onClick={() => {}} className={styles.btn} Icon={ArrowRight}>
+      <Button type="dark" onClick={() => window.open("https://discord.gg/tNePS8Ks", "_blank")} className={styles.btn} Icon={ArrowRight}>
         Join our discord
       </Button>
       <hr className={styles.dvdr} />

@@ -1,9 +1,13 @@
 import { aboutHeroImg, amaku, ifere, LinkedinIcon, moore, TwitterIcon } from "assets";
 import { Button } from "components/generalComponents";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
+import { Routes } from "router";
 import styles from "./styles.module.css";
 
 const AboutUI = () => {
+  const navigate = useNavigate();
+
   const members = [
     {
       name: (
@@ -13,8 +17,8 @@ const AboutUI = () => {
       ),
       image: ifere,
       role: "CEO/Co-Founder",
-      twitter: "",
-      linkedin: "",
+      twitter: "https://twitter.com/ifere__?s=21&t=CaKJfvWcxUzC1dfwnMLxbw",
+      linkedin: "https://www.linkedin.com/in/immanuel-ifere-2b881b16a",
     },
     {
       name: (
@@ -26,7 +30,7 @@ const AboutUI = () => {
       image: moore,
       role: "CTO/Co-Founder",
       twitter: "",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/moore-dagogo-hart-33b419164",
     },
     {
       name: (
@@ -36,8 +40,8 @@ const AboutUI = () => {
       ),
       image: amaku,
       role: "Blockchain Developer",
-      twitter: "",
-      linkedin: "",
+      twitter: "https://twitter.com/maestrohwithit?s=21&t=ReVUp45xL5k1XxZY_ngc7w",
+      linkedin: "https://www.linkedin.com/in/david-amaku",
     },
   ];
   return (
@@ -71,12 +75,20 @@ const AboutUI = () => {
                   <p className={styles.name}>{item.name}</p>
                   <p className={styles.role}>{item.role}</p>
                   <div className={styles.socials}>
-                    <a href={item.linkedin}>
-                      <LinkedinIcon />
-                    </a>
-                    <a href={item.twitter}>
-                      <TwitterIcon />
-                    </a>
+                    {item.linkedin ? (
+                      <a href={item.linkedin}>
+                        <LinkedinIcon />
+                      </a>
+                    ) : (
+                      ""
+                    )}
+                    {item.twitter ? (
+                      <a href={item.twitter}>
+                        <TwitterIcon />
+                      </a>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </div>
               ))}
@@ -95,7 +107,7 @@ const AboutUI = () => {
       <section className={styles.convoBg}>
         <div className={styles.convo}>
           <p className={styles.convoTxt}>Start a conversation with us</p>
-          <Button className={styles.convoBtn} type="light" onClick={() => {}}>
+          <Button className={styles.convoBtn} type="light" onClick={() => navigate(Routes.contactUs)}>
             CONTACT US
           </Button>
         </div>

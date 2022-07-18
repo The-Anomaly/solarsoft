@@ -1,18 +1,21 @@
 import { CaretDown, kryptoAlienz1, kryptoAlienz2, kryptoAlienz3 } from "assets";
 import { Button } from "components";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
+import { Routes } from "router";
 import styles from "./styles.module.css";
 
 const ServiceDetails = () => {
+  const navigate = useNavigate();
   const [active, setActive] = React.useState(0);
   const alienz = [kryptoAlienz1, kryptoAlienz2, kryptoAlienz3];
 
   const left = () => {
-    setActive((prev) => (prev === 0 ? 0 : prev - 1));
+    setActive((prev) => (prev === 0 ? 2 : prev - 1));
   };
 
   const right = () => {
-    setActive((prev) => (prev < 2 ? prev + 1 : 2));
+    setActive((prev) => (prev < 2 ? prev + 1 : 0));
   };
 
   console.log(active);
@@ -21,9 +24,9 @@ const ServiceDetails = () => {
       <h2 className={styles.ttl}>Non-Fungible Tokens (NFTs)</h2>
       <div className={styles.info}>
         <p className={styles.bottom1}>
-          NFTs (Non-fungible tokens) are unique and irreplaceable digital assets. Unlike cryptocurrency(ETH, SOL, USDT),
-          NFTs can’t be exchanged. These assets range from online-only assets like digital art or even event tickets to
-          real-life assets like real estate.
+          NFTs (Non-fungible tokens) are unique and irreplaceable digital assets. Unlike cryptocurrency (ETH, SOL,
+          USDT), NFTs can’t be exchanged. These assets range from online-only assets like digital art or even event
+          tickets to real-life assets like real estate.
         </p>
         <p className={styles.bottom1}>
           With the help of smart contracts, real-world assets can be tokenized and verified on the blockchain. Allowing
@@ -98,7 +101,7 @@ const ServiceDetails = () => {
         </p>
         <div className={styles.contact}>
           <p>Start a conversation with us</p>
-          <Button type="light" onClick={() => {}}>
+          <Button type="light" onClick={() => navigate(Routes.contactUs)}>
             CONTACT US
           </Button>
         </div>

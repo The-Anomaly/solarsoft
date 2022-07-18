@@ -182,7 +182,12 @@ const NFTCollection = () => {
                 />
               </>
             </div>
-            <Button type="transparent" onClick={() => {}} className={styles.btn} Icon={ArrowRight}>
+            <Button
+              type="transparent"
+              onClick={() => window.open("https://opensea.io/solarsoft", "_blank")}
+              className={styles.btn}
+              Icon={ArrowRight}
+            >
               View in marketplace{" "}
             </Button>
           </div>

@@ -50,13 +50,13 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--blue);
+  background: #2f5fdd80;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--blue);
+  background: #2f5fdd80;
 }
 
 button,
@@ -77,6 +77,6 @@ svg {
   padding-right: var(--site-max-pad);
 }
 
-[role=button] {
+[role="button"] {
   cursor: pointer;
 }

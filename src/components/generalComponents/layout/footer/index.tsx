@@ -13,14 +13,16 @@ const Footer = () => {
           <p className={styles.ttl}>Products</p>
           <ul className={styles.items}>
             <li>
-              <a>Nebula Wallet</a>
+              <a href="https://www.nebulawallet.io" target={"_blank"} rel="noreferrer">
+                Nebula Wallet
+              </a>
             </li>
-            <li>
+            {/* <li>
               <a>Nebula Music</a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a>Solarsoft University</a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div>
@@ -38,7 +40,9 @@ const Footer = () => {
           <p className={styles.ttl}>Support</p>
           <ul className={styles.items}>
             <li>
-              <a>API Documentation</a>
+              <a href="https://docs.nebulawallet.io/" target={"_blank"} rel="noreferrer">
+                API Documentation
+              </a>
             </li>
           </ul>
         </div>
@@ -57,19 +61,19 @@ const Footer = () => {
         <p className={styles.copy}>© 2022 Solarsoft Technology </p>
       </div>
       <div className={styles.socials}>
-        <a>
+        <a href="https://twitter.com/solarsoft_io?s=21&t=fnnerWqHWC4k1oGqFQVqZQ" target={"_blank"} rel="noreferrer">
           <TwitterIcon />
         </a>
-        <a>
+        <a href="https://discord.gg/tNePS8Ks" target={"_blank"} rel="noreferrer">
           <DiscordIcon />
         </a>
-        <a>
+        <a href="https://link.medium.com/XNrhrm9plrb" target={"_blank"} rel="noreferrer">
           <MediumIcon />
         </a>
-        <a>
+        <a href="https://www.linkedin.com/company/solarsoft/" target={"_blank"} rel="noreferrer">
           <LinkedinIcon />
         </a>
-        <a>
+        <a href="https://www.instagram.com/solarsoft.io/" target={"_blank"} rel="noreferrer">
           <InstagramIcon />
         </a>
       </div>

@@ -1,8 +1,11 @@
 import { Button } from "components";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
+import { Routes } from "router";
 import styles from "./styles.module.css";
 
 const ServiceDetails = () => {
+  const navigate = useNavigate();
   return (
     <section className={`siteWrapper ${styles.wrapper}`}>
       <h2 className={styles.ttl}>Smart Contracts</h2>
@@ -50,7 +53,7 @@ const ServiceDetails = () => {
         <p className={styles.bottom1}>These use cases include NFT custom smart contracts, tokens, DAOs and Dapps.</p>
         <div className={styles.contact}>
           <p>Start a conversation with us</p>
-          <Button type="light" onClick={() => {}}>
+          <Button type="light" onClick={() => navigate(Routes.contactUs)}>
             CONTACT US
           </Button>
         </div>

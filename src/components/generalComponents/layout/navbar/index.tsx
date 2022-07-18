@@ -74,20 +74,21 @@ const NavBar = () => {
       Icon: NebulaWalletIcon,
       title: "Nebula Wallet",
       text: "A cross chain NFT wallet",
-      action: () => {},
+      action: () => window.open("https://www.nebulawallet.io", "_blank"),
     },
     {
       Icon: SolarsoftUniIcon,
       title: "Solarsoft University",
       text: "Learn about blockchain technology and NFTs",
       action: () => {},
+      comingSoon: true,
     },
     {
       Icon: NebulaMusicIcon,
       title: "Nebula Music",
       text: "A decentralised music streaming protocol",
       action: () => {},
-      comingSoon: true
+      comingSoon: true,
     },
   ];
 
@@ -100,7 +101,7 @@ const NavBar = () => {
     {
       title: "API Docs",
       text: "Well documented API to help you build better, faster.",
-      action: () => {},
+      action: () => window.open("https://docs.nebulawallet.io/", "_blank"),
     },
   ];
   const navItems: NavItemProps[] = [
@@ -141,7 +142,9 @@ const NavBar = () => {
     <>
       <nav className={`${styles.navBg} ${showNav ? styles.openNav : ""}`}>
         <div className={`siteWrapper ${styles.nav}`}>
-          <Logo className={styles.logo} />
+          <Link to={Routes.home}>
+            <Logo className={styles.logo} />
+          </Link>
           <div className={styles.navItems}>
             {navItems.map((item, index) => (
               <NavItem key={index} {...item} />
@@ -153,7 +156,9 @@ const NavBar = () => {
         </div>
         <div className={styles.mobileNav}>
           <div className={styles.header}>
-            <Logo className={styles.logo} />
+            <Link to={Routes.home}>
+              <Logo className={styles.logo} />
+            </Link>
             {!showNav ? (
               <HamburgerMenu onClick={() => setShowNav(true)} role="button" className={styles.menuBtn} />
             ) : (
@@ -171,14 +176,19 @@ const NavBar = () => {
                   <CaretDown role="button" onClick={() => setActive(active === "products" ? "" : "products")} />
                   {active === "products" ? (
                     <div className={styles.dropdown}>
-                      <a href="" className={styles.dropdownItem}>
+                      <a
+                        href="https://www.nebulawallet.io"
+                        target={"_blank"}
+                        rel="noreferrer"
+                        className={styles.dropdownItem}
+                      >
                         <NebulaWalletIcon /> Nebula Wallet
                       </a>
                       <a href="" className={styles.dropdownItem}>
-                        <SolarsoftUniIcon /> Solarsoft University
+                        <SolarsoftUniIcon /> Solarsoft University <span className={styles.comingSoon}>Coming soon</span>
                       </a>
                       <a href="" className={styles.dropdownItem}>
-                        <NebulaMusicIcon /> Nebula Music  <span className={styles.comingSoon}>Coming soon</span>
+                        <NebulaMusicIcon /> Nebula Music <span className={styles.comingSoon}>Coming soon</span>
                       </a>
                     </div>
                   ) : (
@@ -212,7 +222,12 @@ const NavBar = () => {
                       <Link onClick={closeNav} to={Routes.blog} className={styles.dropdownItem}>
                         Blog
                       </Link>
-                      <a href="" className={styles.dropdownItem}>
+                      <a
+                        href="https://docs.nebulawallet.io/"
+                        target={"_blank"}
+                        rel="noreferrer"
+                        className={styles.dropdownItem}
+                      >
                         API Docs
                       </a>
                     </div>
