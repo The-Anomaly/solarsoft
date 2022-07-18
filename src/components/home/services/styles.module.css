@@ -68,25 +68,25 @@ button.serviceBtn {
   color: var(--secondaryText);
   background: #12171f;
 }
-.logo1 {
-  width: 18vw;
-  min-width: 18vw;
+.slider {
+  background: transparent;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
 }
-.logo2 {
-  width: 20vw;
-  min-width: 20vw;
+.slideTrack {
+  animation: scroll 30s linear infinite;
+  display: flex;
+  width: calc(23vw * 10);
 }
-.logo3 {
-  width: 18vw;
-  min-width: 18vw;
+.slide {
+  width: 23vw;
+  padding-right: 2rem;
 }
-.logo4 {
-  width: 20vw;
-  min-width: 20vw;
-}
-.logo5 {
-  width: 15vw;
-  min-width: 15vw;
+.slide svg {
+  width: 100%;
+  min-width: 200px;
+  max-height: 64px
 }
 @media screen and (max-width: 1200px) {
   .ttl {
@@ -113,6 +113,17 @@ button.serviceBtn {
     margin-bottom: 2rem;
     width: 40px;
   }
+  .slideTrack {
+    width: calc(250px * 10);
+  }
+  .slide {
+    width: 250px;
+    padding-right: 40px;
+  }
+  .slide svg {
+    width: 100%;
+    max-height: 50px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -136,6 +147,9 @@ button.serviceBtn {
   .serviceList {
     margin-bottom: 0;
   }
+  .slideTrack {
+    animation-duration: 10s;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -149,26 +163,6 @@ button.serviceBtn {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-25vw * 7.5));
+    transform: translateX(calc(-23vw * 5));
   }
-}
-
-.slider {
-  background: transparent;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-}
-.slideTrack {
-  animation: scroll 30s linear infinite;
-  display: flex;
-  width: calc(25vw * 15);
-}
-.slide {
-  width: 25vw;
-  padding-right: 3rem;
-}
-.slide svg {
-  width: 100%;
-  min-width: unset
 }

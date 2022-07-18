@@ -105,21 +105,6 @@ const Services = () => {
             <div className={styles.slide}>
               <ChainLinkLogo className={styles.logo5} />
             </div>
-            <div className={styles.slide}>
-              <EthereumLogo className={styles.logo1} />
-            </div>
-            <div className={styles.slide}>
-              <AlchemyLogo className={styles.logo2} />
-            </div>
-            <div className={styles.slide}>
-              <SolanaLogo className={styles.logo3} />
-            </div>
-            <div className={styles.slide}>
-              <MagicEdenLogo className={styles.logo4} />
-            </div>
-            <div className={styles.slide}>
-              <ChainLinkLogo className={styles.logo5} />
-            </div>
           </div>
         </div>
       </section>
