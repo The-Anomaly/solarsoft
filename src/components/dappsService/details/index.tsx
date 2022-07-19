@@ -44,7 +44,7 @@ const ServiceDetails = () => {
         <p className={styles.bottom1}>
           Solarsoft is building an NFT wallet. The wallet will be functional, cross-chain and incredibly easy to use. It
           will be the first multi-chain, <b>cross-chain NFT wallet</b> of its kind that allows you send multiple NFTs
-          across multple blockchains in one transaction.
+          across multiple blockchains in one transaction.
         </p>
         <div className={styles.shareNft}>
           <div>
