@@ -2,6 +2,7 @@ import { blogImage } from "assets";
 import { BlogCard } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
+import blogs from "../../blogs.json";
 
 const MainBlog = () => {
   return (
@@ -28,12 +29,9 @@ const BlogUI = () => {
       <h1 className={styles.ttl}>Blog</h1>
       <MainBlog />
       <div className={styles.blogList}>
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        {blogs.map((elem, idx) => (
+          <BlogCard key={idx} {...elem} />
+        ))}
       </div>
     </section>
   );

@@ -107,7 +107,7 @@ const NFTCollection = () => {
       state: 5,
       changeActive: (x) => setActive(x),
       title: "DAMAGED CITIZENS",
-      subTitle: "Tade | 5,555 pieces",
+      subTitle: "Tade | 5,005 pieces",
       text: (
         <>
           Damaged Ctzns, an NFT pvp/p2e game collection of 5005 inhabitants of 'Kronos'. - Forced to relocation by the self-destruction of their home planet, They arrive on kronos, a small peaceful planet brimming with life, Where an all-out war for control begins
@@ -166,7 +166,7 @@ const NFTCollection = () => {
               </>
               <>
                 <img
-                  src={dmgd3}
+                  src={dmgd2}
                   className={`${styles.krypto3} ${active === 5 ? styles.imageSlide : ""}`}
                   alt=""
                 />
