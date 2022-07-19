@@ -9,6 +9,9 @@ import kronos3 from "./kronos3.png";
 import duckz1 from "./duckz1.png";
 import duckz2 from "./duckz2.png";
 import duckz3 from "./duckz3.png";
+import dmgd1 from "./dmgd1.png";
+import dmgd2 from "./dmgd2.png";
+import dmgd3 from "./dmgd3.png";
 import blogImage from "./blogImage.png";
 import apiCode from "./apiCode.png";
 import aboutHeroImg from "./aboutHeroImg.png";
@@ -40,4 +43,7 @@ export {
   nfts,
   landingHero2Img,
   landingHero1Img,
+  dmgd1,
+  dmgd2,
+  dmgd3,
 };

@@ -14,6 +14,9 @@ import {
   kryptoAlienz1,
   kryptoAlienz2,
   kryptoAlienz3,
+  dmgd1,
+  dmgd2,
+  dmgd3,
 } from "assets";
 import { Button } from "components";
 
@@ -104,13 +107,10 @@ const NFTCollection = () => {
       state: 5,
       changeActive: (x) => setActive(x),
       title: "DAMAGED CITIZENS",
-      subTitle: "Esosa | 5 pieces",
+      subTitle: "Tade | 5,555 pieces",
       text: (
         <>
-          In the year 4444, a tribe of 20 women emerged after the extinction of the pure human race. This society is
-          called Alta (soaring). It is one of the five societies of Nasie. <br />
-          Alta is known for its magic, advanced technology and female domination. When one of their own becomes an
-          enemy, trust is broken and the future of Alta loses balance.
+          Damaged Ctzns, an NFT pvp/p2e game collection of 5005 inhabitants of 'Kronos'. - Forced to relocation by the self-destruction of their home planet, They arrive on kronos, a small peaceful planet brimming with life, Where an all-out war for control begins
         </>
       ),
     },
@@ -166,17 +166,17 @@ const NFTCollection = () => {
               </>
               <>
                 <img
-                  src={kryptoAlienz3}
+                  src={dmgd3}
                   className={`${styles.krypto3} ${active === 5 ? styles.imageSlide : ""}`}
                   alt=""
                 />
                 <img
-                  src={kryptoAlienz2}
+                  src={dmgd3}
                   className={`${styles.krypto2} ${active === 5 ? styles.imageSlide : ""}`}
                   alt=""
                 />
                 <img
-                  src={kryptoAlienz1}
+                  src={dmgd1}
                   className={`${styles.krypto1} ${active === 5 ? styles.imageSlide : ""}`}
                   alt=""
                 />
