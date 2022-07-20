@@ -76,14 +76,14 @@ const AboutUI = () => {
                   <p className={styles.role}>{item.role}</p>
                   <div className={styles.socials}>
                     {item.linkedin ? (
-                      <a href={item.linkedin}>
+                      <a href={item.linkedin} target="_blank" rel="noreferrer">
                         <LinkedinIcon />
                       </a>
                     ) : (
                       ""
                     )}
                     {item.twitter ? (
-                      <a href={item.twitter}>
+                      <a href={item.twitter} target="_blank" rel="noreferrer">
                         <TwitterIcon />
                       </a>
                     ) : (
