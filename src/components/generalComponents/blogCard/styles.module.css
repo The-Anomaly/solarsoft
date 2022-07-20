@@ -1,6 +1,8 @@
 .blog {
   width: 33%;
   max-width: 320px;
+  display: flex;
+  flex-direction: column;
 }
 .imgSec {
   width: 100%;
@@ -49,6 +51,7 @@
   display: block;
   text-overflow: ellipsis;
   position: relative;
+  margin-top: auto;
 }
 .txt::after {
   content: "...";

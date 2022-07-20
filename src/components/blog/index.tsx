@@ -1,22 +1,20 @@
-import { blogImage } from "assets";
 import { BlogCard } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
 import blogs from "../../blogs.json";
 
-const MainBlog = () => {
+const MainBlog = ({ title, article, image, category, date, url }) => {
   return (
     <div className={styles.blog}>
       <div className={styles.imgSec}>
-        <img className={styles.img} src={blogImage} alt="" />
+        <img className={styles.img} src={image} alt="" />
       </div>
       <div className={styles.txtSec}>
-        <p className={styles.label}>NFTs</p>
-        <p className={styles.blogTtl}>9 NFT Marketplaces You Should Explore</p>
-        <p className={styles.date}>26 May 2022</p>
+        <p className={styles.label}>{category}</p>
+        <p className={styles.blogTtl} onClick={() => window.open(url, "_blank")} >{title}</p>
+        <p className={styles.date}>{date}</p>
         <p className={styles.blogTxt}>
-          Several things are imperative when it comes to NFTs, one of those being a promising community. NFT
-          marketplaces have leveraged the power of communities in building their platforms....
+          {article}
         </p>
       </div>
     </div>
@@ -27,9 +25,9 @@ const BlogUI = () => {
   return (
     <section className={`siteWrapper ${styles.blogWrapper}`}>
       <h1 className={styles.ttl}>Blog</h1>
-      <MainBlog />
+      <MainBlog {...blogs[0]} />
       <div className={styles.blogList}>
-        {blogs.map((elem, idx) => (
+        {blogs.slice(1, blogs.length - 1).map((elem, idx) => (
           <BlogCard key={idx} {...elem} />
         ))}
       </div>

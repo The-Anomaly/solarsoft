@@ -59,12 +59,28 @@
   font-size: 46px;
   margin-bottom: 1.2rem;
   max-width: 550px;
+  cursor: pointer;
+}
+.blogTtl:hover {
+  color: var(--blue);
 }
 .blogTxt {
   font-size: 19px;
   font-weight: 200;
   line-height: 1.7;
   width: 95%;
+  max-height: 89px;
+  overflow: hidden;
+  position: relative;
+}
+.blogTxt::after {
+  content: "...";
+  display: block;
+  color: var(--white);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  line-height: 1.5;
 }
 .date {
   font-size: 22px;
@@ -148,6 +164,7 @@
   }
   .blogTxt {
     font-size: 16px;
+    max-height: 80px;
   }
   .blogList > div {
     margin-right: 0 !important;
