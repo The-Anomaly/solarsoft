@@ -1,7 +1,7 @@
 import * as React from "react";
 import styles from "./styles.module.css";
 
-const BlogCard = ({ title, article, image, category }) => {
+const BlogCard = ({ title, article, image, category, url }) => {
   return (
     <div className={styles.blog}>
       <div className={styles.imgSec}>
@@ -9,7 +9,9 @@ const BlogCard = ({ title, article, image, category }) => {
       </div>
       <div className={styles.ttlSec}>
         <p className={styles.label}>{category}</p>
-        <p className={styles.ttl}>{title}</p>
+        <p onClick={() => window.open(url, "_blank")} className={styles.ttl}>
+          {title}
+        </p>
       </div>
       <p className={styles.txt}>{article}</p>
     </div>
