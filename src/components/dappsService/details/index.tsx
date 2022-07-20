@@ -24,7 +24,7 @@ const ServiceDetails = () => {
           <li>Problem statement</li>
           <li>Market & user research</li>
           <li>Documentation (PRD & FRD) - Goals, features, and capabilities </li>
-          <li>Design & prototyping Sprint </li>
+          <li>Design & Prototyping sprint </li>
           <li>Development sprint & Integration</li>
           <li>Optimization, quality assurance, testing , execution & evaluation</li>
         </ul>

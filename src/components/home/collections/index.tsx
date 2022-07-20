@@ -30,13 +30,20 @@ interface CollectionInfoProps {
 }
 
 const CollectionInfo: React.FC<CollectionInfoProps> = ({ active, state, changeActive, title, subTitle, text }) => {
+  const contentEl = React.useRef<HTMLDivElement>(null);
   return (
     <div className={`${styles.collectionItem} ${state === active ? styles.activeCollection : ""}`}>
       <p className={styles.collectionTtl} role="button" onClick={() => changeActive(state)}>
         {title}
       </p>
-      <p className={styles.collectionSubTtl}>{subTitle}</p>
-      <p className={styles.collectionTxt}>{text}</p>
+      <div
+        ref={contentEl}
+        className={styles.collectionBody}
+        style={active === state && contentEl.current ? { height: contentEl.current.scrollHeight } : { height: "0px" }}
+      >
+        <p className={styles.collectionSubTtl}>{subTitle}</p>
+        <p className={styles.collectionTxt}>{text}</p>
+      </div>
     </div>
   );
 };
@@ -110,7 +117,9 @@ const NFTCollection = () => {
       subTitle: "Tade | 5,005 pieces",
       text: (
         <>
-          Damaged Ctzns, an NFT pvp/p2e game collection of 5005 inhabitants of 'Kronos'. - Forced to relocation by the self-destruction of their home planet, They arrive on kronos, a small peaceful planet brimming with life, Where an all-out war for control begins
+          Damaged Ctzns, an NFT pvp/p2e game collection of 5005 inhabitants of 'Kronos'. - Forced to relocation by the
+          self-destruction of their home planet, They arrive on kronos, a small peaceful planet brimming with life,
+          Where an all-out war for control begins
         </>
       ),
     },
@@ -119,11 +128,11 @@ const NFTCollection = () => {
   const alienz = [kryptoAlienz1, kryptoAlienz2, kryptoAlienz3];
 
   const left = () => {
-    setActiveImg((prev) => (prev === 0 ? 0 : prev - 1));
+    setActiveImg((prev) => (prev === 0 ? 2 : prev - 1));
   };
 
   const right = () => {
-    setActiveImg((prev) => (prev < 2 ? prev + 1 : 2));
+    setActiveImg((prev) => (prev < 2 ? prev + 1 : 0));
   };
 
   return (
@@ -165,21 +174,9 @@ const NFTCollection = () => {
                 <img src={duckz1} className={`${styles.krypto1} ${active === 4 ? styles.imageSlide : ""}`} alt="" />
               </>
               <>
-                <img
-                  src={dmgd2}
-                  className={`${styles.krypto3} ${active === 5 ? styles.imageSlide : ""}`}
-                  alt=""
-                />
-                <img
-                  src={dmgd3}
-                  className={`${styles.krypto2} ${active === 5 ? styles.imageSlide : ""}`}
-                  alt=""
-                />
-                <img
-                  src={dmgd1}
-                  className={`${styles.krypto1} ${active === 5 ? styles.imageSlide : ""}`}
-                  alt=""
-                />
+                <img src={dmgd2} className={`${styles.krypto3} ${active === 5 ? styles.imageSlide : ""}`} alt="" />
+                <img src={dmgd3} className={`${styles.krypto2} ${active === 5 ? styles.imageSlide : ""}`} alt="" />
+                <img src={dmgd1} className={`${styles.krypto1} ${active === 5 ? styles.imageSlide : ""}`} alt="" />
               </>
             </div>
             <div className={styles.btnWrap}>

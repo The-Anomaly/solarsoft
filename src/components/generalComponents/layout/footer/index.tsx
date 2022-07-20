@@ -5,7 +5,18 @@ import { Link } from "react-router-dom";
 import { Routes } from "router";
 import styles from "./styles.module.css";
 
-const Footer = () => {
+interface FooterProps {
+  submitNewsletter: (email: string) => void;
+  reset: boolean;
+}
+
+const Footer = ({ submitNewsletter, reset }: FooterProps) => {
+  const [email, setEmail] = React.useState("");
+
+  React.useEffect(() => {
+    setEmail("");
+  }, [reset]);
+
   return (
     <footer className={styles.footer}>
       <div className={styles.links}>
@@ -50,8 +61,15 @@ const Footer = () => {
       <div className={styles.news}>
         <p className={styles.subscribe}>Subscribe to our newsletter</p>
         <form className={styles.form}>
-          <input type={"email"} placeholder="Email" className={styles.input} />
-          <Button className={styles.btn} type={"light"} onClick={() => {}}>
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            type={"email"}
+            placeholder="Email"
+            className={styles.input}
+            value={email}
+            required
+          />
+          <Button disabled={!email} className={styles.btn} type={"light"} onClick={() => submitNewsletter(email)}>
             SUBMIT
           </Button>
         </form>

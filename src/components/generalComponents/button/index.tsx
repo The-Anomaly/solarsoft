@@ -11,9 +11,10 @@ interface ButtonProps {
   >;
   className?: string;
   onClick: () => void;
+  disabled?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, type, Icon, className, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ children, type, Icon, className, onClick, disabled }) => {
   return (
     <button
       className={`${styles.btn} ${styles[type]} ${className}`}
@@ -21,6 +22,7 @@ const Button: React.FC<ButtonProps> = ({ children, type, Icon, className, onClic
         e.preventDefault();
         onClick();
       }}
+      disabled={disabled}
     >
       {children} {Icon ? <Icon className={styles.icon} /> : ""}
     </button>

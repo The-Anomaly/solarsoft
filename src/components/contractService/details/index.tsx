@@ -35,7 +35,7 @@ const ServiceDetails = () => {
         </p>
         <h3 className={styles.subTtl}>The Solution</h3>
         <p className={styles.bottom1}>
-          Unlike web 2.0, web 3.0 protocols are able to have native tokens that are used as incentives for its user
+          Unlike web 2.0, web 3.0 protocols are able to have native tokens that are used as incentives for its users
           through smart contracts.
         </p>
         <p className={styles.bottom3}>
@@ -47,7 +47,7 @@ const ServiceDetails = () => {
           Solarsoft, smart contract and minting services for the Celestial Void NFT by TSE.
         </p>
         <p className={styles.bottom1}>
-          we elicit and validate clients use cases to see how the implementation of smart contracts can help proceed to
+          We elicit and validate clients use cases to see how the implementation of smart contracts can help proceed to
           provide effective asset tokenisation via smart contracts.
         </p>
         <p className={styles.bottom1}>These use cases include NFT custom smart contracts, tokens, DAOs and Dapps.</p>

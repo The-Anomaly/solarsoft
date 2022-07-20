@@ -35,6 +35,8 @@ import { ReactComponent as AlchemyLogo } from "./alchemyLogo.svg";
 import { ReactComponent as MagicEdenLogo } from "./magicEdenLogo.svg";
 import { ReactComponent as ChainLinkLogo } from "./chainLinkLogo.svg";
 import { ReactComponent as NebulaLogo } from "./nebulaLogo.svg";
+import { ReactComponent as CheckIcon } from "./check.svg";
+import { ReactComponent as ErrorIcon } from "./error.svg";
 
 export {
   AlchemyLogo,
@@ -74,4 +76,6 @@ export {
   PlusIcon,
   MinusIcon,
   SmartContractIcon2,
+  CheckIcon,
+  ErrorIcon,
 };
