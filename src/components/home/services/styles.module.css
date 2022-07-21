@@ -86,7 +86,7 @@ button.serviceBtn {
 .slide svg {
   width: 100%;
   min-width: 200px;
-  max-height: 64px
+  max-height: 64px;
 }
 @media screen and (max-width: 1200px) {
   .ttl {
@@ -134,6 +134,9 @@ button.serviceBtn {
     font-size: 16px;
     max-width: 600px;
   }
+  .services {
+    padding-bottom: 4rem;
+  }
   .serviceTtl {
     font-size: 24px;
   }
@@ -142,19 +145,49 @@ button.serviceBtn {
     max-width: 300px;
   }
   .partners {
-    display: none;
+    padding-bottom: 5rem;
   }
   .serviceList {
     margin-bottom: 0;
   }
-  .slideTrack {
-    animation-duration: 10s;
+  .partners .slideTrack {
+    animation: unset;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    justify-content: center;
+  }
+  .slide:nth-of-type(n + 6) {
+    display: none;
+  }
+  .partners .slide {
+    width: 30%;
+    min-width: 150px;
+    margin: unset;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    max-width: 250px;
+  }
+  .slide svg {
+    min-width: unset;
   }
 }
 
 @media screen and (max-width: 600px) {
   .ttl {
     font-size: 2rem;
+  }
+  .partners .slide {
+    width: 50%;
+    min-width: unset;
+    padding: 0 0.65rem;
+  }
+  .slide svg {
+    max-height: 35px;
+  }
+  .txt2 {
+    font-size: 16px;
+    margin-bottom: 2rem;
   }
 }
 
