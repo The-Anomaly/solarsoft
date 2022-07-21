@@ -131,15 +131,12 @@ const NFTCollection = () => {
       ),
     },
   ];
-
-  const alienz = [kryptoAlienz1, kryptoAlienz2, kryptoAlienz3];
-
   const left = () => {
-    setActiveImg((prev) => (prev === 0 ? 2 : prev - 1));
+    setActive((prev) => (prev === 1 ? 5 : prev - 1));
   };
 
   const right = () => {
-    setActiveImg((prev) => (prev < 2 ? prev + 1 : 0));
+    setActive((prev) => (prev < 5 ? prev + 1 : 1));
   };
 
   return (
@@ -215,23 +212,58 @@ const NFTCollection = () => {
                 <CaretDown />
               </button>
               <div className={styles.imgSecMobile}>
-                {alienz.map((item, index) => (
+                <>
+                  <img src={alta2} className={`${styles.krypto2} ${active === 1 ? styles.imageSlide : ""}`} alt="" />
+                  <img src={alta1} className={`${styles.krypto1} ${active === 1 ? styles.imageSlide : ""}`} alt="" />
+                </>
+                <>
+                  <img src={kronos3} className={`${styles.krypto3} ${active === 2 ? styles.imageSlide : ""}`} alt="" />
+                  <img src={kronos2} className={`${styles.krypto2} ${active === 2 ? styles.imageSlide : ""}`} alt="" />
+                  <img src={kronos1} className={`${styles.krypto1} ${active === 2 ? styles.imageSlide : ""}`} alt="" />
+                </>
+                <>
                   <img
-                    className={`${styles.img} ${index === activeImg ? styles.showImg : ""}`}
-                    src={item}
-                    key={index}
+                    src={kryptoAlienz3}
+                    className={`${styles.krypto3} ${active === 3 ? styles.imageSlide : ""}`}
                     alt=""
                   />
-                ))}
+                  <img
+                    src={kryptoAlienz2}
+                    className={`${styles.krypto2} ${active === 3 ? styles.imageSlide : ""}`}
+                    alt=""
+                  />
+                  <img
+                    src={kryptoAlienz1}
+                    className={`${styles.krypto1} ${active === 3 ? styles.imageSlide : ""}`}
+                    alt=""
+                  />
+                </>
+                <>
+                  <img src={duckz3} className={`${styles.krypto3} ${active === 4 ? styles.imageSlide : ""}`} alt="" />
+                  <img src={duckz2} className={`${styles.krypto2} ${active === 4 ? styles.imageSlide : ""}`} alt="" />
+                  <img src={duckz1} className={`${styles.krypto1} ${active === 4 ? styles.imageSlide : ""}`} alt="" />
+                </>
+                <>
+                  <img src={dmgd2} className={`${styles.krypto3} ${active === 5 ? styles.imageSlide : ""}`} alt="" />
+                  <img src={dmgd3} className={`${styles.krypto2} ${active === 5 ? styles.imageSlide : ""}`} alt="" />
+                  <img src={dmgd1} className={`${styles.krypto1} ${active === 5 ? styles.imageSlide : ""}`} alt="" />
+                </>
               </div>
               <button onClick={right} className={`${styles.rightCtrl} ${styles.ctrlMobile}`}>
                 <CaretDown />
               </button>
             </div>
-            <CollectionInfo {...collectionList[2]} active={3} />
-            <Button type="transparent" onClick={() => {}} className={styles.btn} Icon={ArrowRight}>
-              View in marketplace
-            </Button>
+            {/* <CollectionInfo {...collectionList[active - 1]} active={active} /> */}
+            {collectionList.map((item, index) => (
+              <CollectionInfo {...item} key={index} active={active} />
+            ))}
+            {active === 2 ? (
+              <Button type="transparent" onClick={() => {}} className={styles.btn} Icon={ArrowRight}>
+                View in marketplace
+              </Button>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>

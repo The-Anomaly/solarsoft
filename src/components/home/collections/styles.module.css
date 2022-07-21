@@ -151,10 +151,11 @@
 @media screen and (max-width: 800px) {
   .ttl {
     font-size: 2.2rem;
+    margin-bottom: 4.5rem;
   }
   .collectionWrap {
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
   }
   .collection {
     display: none;
@@ -163,6 +164,12 @@
     display: flex;
     color: var(--black);
   }
+  img.krypto1.imageSlide {
+    position: relative;
+  }
+  .collectionBody {
+    height: unset !important;
+  }
   .kronos {
     display: flex;
     align-items: center;
@@ -170,7 +177,7 @@
     height: fit-content;
     margin-right: 2rem;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   .kronos button {
     background: var(--secondaryText);
@@ -182,7 +189,7 @@
     cursor: pointer;
   }
   .kronos button svg path {
-    fill: var(--black);
+    fill: var(--white);
   }
   .leftCtrl {
     transform: rotate(90deg);
@@ -192,11 +199,14 @@
   }
   .imgSecMobile {
     margin: 0 1rem;
-    min-height: 220px;
+    width: 100%;
+    position: relative;
   }
   .imgSecMobile img {
+    right: 100vw;
+    position: absolute;
     width: 100%;
-    display: none;
+    bottom: 0;
   }
   .showImg {
     display: block !important;
@@ -208,16 +218,21 @@
   .collectionItem {
     text-align: center;
     margin-bottom: 0;
+    /* visibility: hidden; */
+    display: none;
+  }
+  .activeCollection {
+    /* visibility: visible; */
+    display: block;
   }
   .collectionItem br {
     display: none;
   }
   .btn {
-    color: var(--blue) !important;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
-  .btn svg path {
-    fill: var(--blue);
+  .activeCollection .collectionTtl {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 600px) {
