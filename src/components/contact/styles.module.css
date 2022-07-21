@@ -24,11 +24,14 @@
   max-width: 680px;
   margin: 0 auto;
 }
+.inputWrap {
+  margin-bottom: 30px;
+}
 .form input {
   width: 100%;
   background: #1e2028;
   border: none;
-  margin-bottom: 30px;
+  margin-bottom: 4px;
   border-radius: 4px;
   font-weight: 200;
   color: var(--white);
@@ -40,7 +43,7 @@
   width: 100%;
   background: #1e2028;
   border: none;
-  margin-bottom: 30px;
+  margin-bottom: 4px;
   border-radius: 4px;
   padding: 1rem;
   font-size: 15px;
@@ -60,7 +63,11 @@
   padding: 12px 48px;
   font-size: 15px;
 }
-
+.errorMessage {
+  font-size: 11px;
+  font-weight: 300;
+  color: #f45858;
+}
 @media screen and (max-width: 1000px) {
   .contactWrapper {
     padding-top: 8rem;
@@ -88,13 +95,6 @@
     padding-top: 1rem;
     font-size: 14px;
     height: 200px;
-  }
-  .btn {
-    padding: 1rem;
-    font-size: 15px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    height: 54px;
   }
 }
 
