@@ -30,16 +30,23 @@ interface CollectionInfoProps {
 }
 
 const CollectionInfo: React.FC<CollectionInfoProps> = ({ active, state, changeActive, title, subTitle, text }) => {
-  const contentEl = React.useRef<HTMLDivElement>(null);
+  const [height, setHeight] = React.useState(0);
+
+  const measuredRef = React.useCallback((node) => {
+    if (node !== null) {
+      setHeight(node.scrollHeight);
+    }
+  }, []);
+
   return (
     <div className={`${styles.collectionItem} ${state === active ? styles.activeCollection : ""}`}>
       <p className={styles.collectionTtl} role="button" onClick={() => changeActive(state)}>
         {title}
       </p>
       <div
-        ref={contentEl}
+        ref={measuredRef}
         className={styles.collectionBody}
-        style={active === state && contentEl.current ? { height: contentEl.current.scrollHeight } : { height: "0px" }}
+        style={active === state ? { height: height } : { height: "0px" }}
       >
         <p className={styles.collectionSubTtl}>{subTitle}</p>
         <p className={styles.collectionTxt}>{text}</p>

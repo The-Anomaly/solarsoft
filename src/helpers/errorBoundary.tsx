@@ -20,7 +20,7 @@ class ErrorBoundary extends React.Component<any, { hasError: boolean }> {
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return (
-        <div>
+        <div style={{textAlign: "center", marginTop: "3rem"}}>
           <h1>Internal Server Error</h1>
           <p>Something went wrong</p>
         </div>
