@@ -2,22 +2,18 @@ import { Button } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
 
-const ContactUI = () => {
-  const [contactInfo, setContactInfo] = React.useState({
-    firstName: "",
-    lastName: "",
-    workEmail: "",
-    companyName: "",
-    message: "",
-  });
+const initialFormState = {
+  firstName: "",
+  lastName: "",
+  workEmail: "",
+  companyName: "",
+  message: "",
+};
 
-  const [errors, setErrors] = React.useState({
-    firstName: "",
-    lastName: "",
-    workEmail: "",
-    companyName: "",
-    message: "",
-  });
+const ContactUI = () => {
+  const [contactInfo, setContactInfo] = React.useState(initialFormState);
+
+  const [errors, setErrors] = React.useState(initialFormState);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,13 +25,7 @@ const ContactUI = () => {
 
   const validate = () => {
     const keys = Object.keys(contactInfo);
-    let errorMsgs = {
-      firstName: "",
-      lastName: "",
-      workEmail: "",
-      companyName: "",
-      message: "",
-    };
+    let errorMsgs = { ...initialFormState };
 
     keys.map((key) => (contactInfo[key] === "" ? (errorMsgs[key] = "Required") : ""));
     setErrors(errorMsgs);
@@ -52,6 +42,8 @@ const ContactUI = () => {
       `https://docs.google.com/forms/u/0/d/e/1FAIpQLScIhflMBd0k2LRqGR_7kNU1RzEGpYOzbj3Frb7kjPBbDOKeXg/viewform?entry.994487932=${contactInfo.firstName}&entry.2005620554=${contactInfo.lastName}&entry.308682794=${contactInfo.workEmail}&entry.1065046570=${contactInfo.companyName}&entry.839337160=${contactInfo.message}`,
       "_blank",
     );
+
+    setContactInfo(initialFormState);
   };
 
   return (
