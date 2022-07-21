@@ -186,16 +186,20 @@ const NFTCollection = () => {
                 <img src={dmgd1} className={`${styles.krypto1} ${active === 5 ? styles.imageSlide : ""}`} alt="" />
               </>
             </div>
-            <div className={styles.btnWrap}>
-              <Button
-                type="transparent"
-                onClick={() => window.open("https://opensea.io/solarsoft", "_blank")}
-                className={styles.btn}
-                Icon={ArrowRight}
-              >
-                View in marketplace{" "}
-              </Button>
-            </div>
+            {active === 2 ? (
+              <div className={styles.btnWrap}>
+                <Button
+                  type="transparent"
+                  onClick={() => window.open("https://opensea.io/solarsoft", "_blank")}
+                  className={styles.btn}
+                  Icon={ArrowRight}
+                >
+                  View in marketplace{" "}
+                </Button>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
 
           <div className={styles.txtSec}>

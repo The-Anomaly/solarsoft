@@ -2,7 +2,15 @@ import { Button } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
 
-const initialFormState = {
+export interface ContactInfo {
+  firstName: string;
+  lastName: string;
+  workEmail: string;
+  companyName: string;
+  message: string;
+}
+
+const initialFormState: ContactInfo = {
   firstName: "",
   lastName: "",
   workEmail: "",
@@ -10,10 +18,14 @@ const initialFormState = {
   message: "",
 };
 
-const ContactUI = () => {
-  const [contactInfo, setContactInfo] = React.useState(initialFormState);
+interface ContactProps {
+  contact: (data: ContactInfo) => void;
+  reset: boolean;
+}
 
-  const [errors, setErrors] = React.useState(initialFormState);
+const ContactUI: React.FC<ContactProps> = ({ contact, reset }) => {
+  const [contactInfo, setContactInfo] = React.useState<ContactInfo>(initialFormState);
+  const [errors, setErrors] = React.useState<ContactInfo>(initialFormState);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,13 +48,12 @@ const ContactUI = () => {
   };
 
   const submit = () => {
-    window.open(
-      `https://docs.google.com/forms/u/0/d/e/1FAIpQLScIhflMBd0k2LRqGR_7kNU1RzEGpYOzbj3Frb7kjPBbDOKeXg/viewform?entry.994487932=${contactInfo.firstName}&entry.2005620554=${contactInfo.lastName}&entry.308682794=${contactInfo.workEmail}&entry.1065046570=${contactInfo.companyName}&entry.839337160=${contactInfo.message}`,
-      "_blank",
-    );
-
-    setContactInfo(initialFormState);
+    contact(contactInfo);
   };
+
+  React.useEffect(() => {
+    setContactInfo(initialFormState);
+  }, [reset]);
 
   return (
     <section className={`siteWrapper ${styles.contactWrapper}`}>

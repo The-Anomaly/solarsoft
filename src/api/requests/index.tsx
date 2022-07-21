@@ -1,5 +1,5 @@
 import axios from "axios";
 
-export const postRequest = (url, data) => {
-  return axios.post(url, data);
+export const postRequest = (url, data, config?) => {
+  return axios.post(url, data, config);
 };

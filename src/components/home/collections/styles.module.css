@@ -26,7 +26,8 @@
   text-align: right;
   display: flex;
   justify-content: center;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
+  max-width: 450px;
 }
 .txtSec {
   width: 50%;
@@ -35,7 +36,6 @@
 .imgSec img {
   position: absolute;
   width: 100%;
-  max-width: 420px;
 }
 .mainImage {
   position: relative !important;
