@@ -36,8 +36,6 @@ const ContactUI = () => {
   };
 
   const submit = () => {
-    console.log(contactInfo);
-
     window.open(
       `https://docs.google.com/forms/u/0/d/e/1FAIpQLScIhflMBd0k2LRqGR_7kNU1RzEGpYOzbj3Frb7kjPBbDOKeXg/viewform?entry.994487932=${contactInfo.firstName}&entry.2005620554=${contactInfo.lastName}&entry.308682794=${contactInfo.workEmail}&entry.1065046570=${contactInfo.companyName}&entry.839337160=${contactInfo.message}`,
       "_blank",
