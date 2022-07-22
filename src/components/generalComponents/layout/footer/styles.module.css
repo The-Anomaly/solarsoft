@@ -65,6 +65,9 @@
 .input:active, .input:focus {
   border-color: var(--white);
 }
+.input:focus::placeholder {
+  opacity: 0;
+}
 button.btn {
   padding-left: 28px;
   padding-right: 28px;

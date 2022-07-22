@@ -26,7 +26,7 @@ const ServiceDetails = () => {
           <li>Documentation (PRD & FRD) - Goals, features, and capabilities </li>
           <li>Design & Prototyping sprint </li>
           <li>Development sprint & Integration</li>
-          <li>Optimization, quality assurance, testing , execution & evaluation</li>
+          <li>Optimization, quality assurance, testing, execution & evaluation</li>
         </ul>
         <p className={styles.bottom2}>
           We apply this process internally and is what was employed in the development of our first product- Nebula

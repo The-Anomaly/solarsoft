@@ -60,6 +60,10 @@
 .form textarea:focus {
   border-color: var(--secondaryText);
 }
+.form input:focus::placeholder,
+.form textarea:focus::placeholder {
+  opacity: 0;
+}
 .btn {
   width: fit-content;
   justify-content: center;
