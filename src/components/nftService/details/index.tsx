@@ -18,7 +18,6 @@ const ServiceDetails = () => {
     setActive((prev) => (prev < 2 ? prev + 1 : 0));
   };
 
-  console.log(active);
   return (
     <section className={`siteWrapper ${styles.wrapper}`}>
       <h2 className={styles.ttl}>Non-Fungible Tokens (NFTs)</h2>
@@ -34,7 +33,7 @@ const ServiceDetails = () => {
         </p>
         <p className={styles.bottom2}>
           NFTs have blown up over the past few years, and the tokens still have a long future ahead. As long as it is
-          unique, can be stored digitally and holds value. It can be an NFT.
+          unique, can be stored digitally and holds value, it can be an NFT.
         </p>
         <p className={styles.bottom3}>
           Interestingly, NFTs have many other potential use cases than the applications in art that we see today. As an

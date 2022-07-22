@@ -30,12 +30,12 @@ const ServiceDetails = () => {
         <h3 className={styles.subTtl}>The Problem</h3>
         <p className={styles.bottom3}>
           As the internet continues to innovate and grow, so does the pool of shared information. With contributors
-          never being incentivized financially prior to the emergence of Web 3.0. Smart contracts have created an
+          never being incentivized financially prior to the emergence of Web 3.0, Smart contracts have created an
           opportunity to provide incentives to both contributors and those who seek knowledge on the internet today.
         </p>
         <h3 className={styles.subTtl}>The Solution</h3>
         <p className={styles.bottom1}>
-          Unlike web 2.0, web 3.0 protocols are able to have native tokens that are used as incentives for its users
+          Unlike Web 2.0, Web 3.0 protocols are able to have native tokens that are used as incentives for its users
           through smart contracts.
         </p>
         <p className={styles.bottom3}>

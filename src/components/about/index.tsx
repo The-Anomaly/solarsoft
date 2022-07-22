@@ -54,7 +54,7 @@ const AboutUI = () => {
             <p className={styles.txt}>
               We are a new business and creative unit. We provide content creators and advertising partners with
               end-to-end blockchain ecosystem solutions and infrastructure to build, launch, manage and sell NFT content
-              and experience.
+              and experiences.
             </p>
           </div>
           <div className={styles.heroImg}></div>
