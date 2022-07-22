@@ -73,7 +73,7 @@ const Footer = ({ submitNewsletter, reset }: FooterProps) => {
             Submit
           </Button>
         </form>
-        <p className={styles.txt}>By subscribing, I agree to receive communications by Solarsoft</p>
+        <p className={styles.txt}>By subscribing, I agree to receive communications from Solarsoft</p>
       </div>
       <div className={styles.cc}>
         <p className={styles.copy}>© 2022 Solarsoft Technology </p>

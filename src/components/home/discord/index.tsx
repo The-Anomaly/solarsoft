@@ -11,7 +11,6 @@ const Discord = () => {
       <Button type="dark" onClick={() => window.open("https://discord.gg/tNePS8Ks", "_blank")} className={styles.btn} Icon={ArrowRight}>
         Join our Discord
       </Button>
-      <hr className={styles.dvdr} />
     </section>
   );
 };

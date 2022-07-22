@@ -30,7 +30,9 @@ button.btn {
 .btn svg path {
   fill: var(--white);
 }
-
+.blogList [class*="txt"] {
+  margin-top: 0;
+}
 @media screen and (max-width: 1200px) {
   .ttl {
     font-size: 2.5rem;
