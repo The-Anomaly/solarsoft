@@ -3,6 +3,7 @@ import kryptoAlienz2 from "./kryptoAlienz2.png";
 import kryptoAlienz3 from "./kryptoAlienz3.png";
 import alta1 from "./alta1.png";
 import alta2 from "./alta2.png";
+import alta3 from "./alta3.png";
 import kronos1 from "./kronos1.png";
 import kronos2 from "./kronos2.png";
 import kronos3 from "./kronos3.png";
@@ -13,7 +14,6 @@ import dmgd1 from "./dmgd1.png";
 import dmgd2 from "./dmgd2.png";
 import dmgd3 from "./dmgd3.png";
 import blogImage from "./blogImage.png";
-import apiCode from "./apiCode.png";
 import aboutHeroImg from "./aboutHeroImg.png";
 import amaku from "./amaku.png";
 import ifere from "./ifere.png";
@@ -31,6 +31,7 @@ export {
   kryptoAlienz3,
   alta1,
   alta2,
+  alta3,
   kronos1,
   kronos2,
   kronos3,
@@ -38,7 +39,6 @@ export {
   duckz2,
   duckz3,
   blogImage,
-  apiCode,
   aboutHeroImg,
   nfts,
   landingHero2Img,

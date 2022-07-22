@@ -9,7 +9,7 @@
     "c .";
   grid-template-columns: 1.4fr 1fr;
   padding-top: 60px;
-  padding-bottom: 160px;
+  padding-bottom: 110px;
   gap: 4rem 2rem;
 }
 .links {
@@ -59,13 +59,12 @@
   margin-right: 1rem;
   border-radius: 4px;
   width: calc(100% - 140px);
-  font-size: 15px;
+  font-size: 14px;
   color: var(--white);
 }
-.btn {
-  font-size: 16px;
-  padding-left: 26px;
-  padding-right: 26px;
+button.btn {
+  padding-left: 28px;
+  padding-right: 28px;
 }
 .btn:disabled:hover {
   cursor: not-allowed;

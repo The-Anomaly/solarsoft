@@ -6,6 +6,7 @@
   font-size: 46px;
   font-weight: 500;
   margin-bottom: 3rem;
+  text-align: center;
 }
 .others a {
   text-decoration: none;
@@ -18,7 +19,7 @@
   background: linear-gradient(180deg, #202d4f 0%, #192034 100%);
   display: flex;
   align-items: center;
-  padding: 1.2rem 2rem;
+  padding: 8px 14px;
   border-radius: 8px;
   font-size: 17px;
 }
@@ -29,6 +30,7 @@
 .list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1200px) {
@@ -36,7 +38,6 @@
     font-size: 32px;
   }
   .service {
-    padding: 12px 1.5rem;
     font-size: 15px;
     border-radius: 6px;
   }
@@ -60,7 +61,6 @@
     margin-right: 0;
   }
   .service {
-    padding: 10px 1rem;
     width: 100%;
     font-size: 14px;
   }

@@ -52,17 +52,16 @@
 }
 .label {
   margin-bottom: 1.2rem;
-  font-size: 16px;
+  font-size: 17px;
   text-transform: uppercase;
+  font-weight: 300;
 }
 .blogTtl {
-  font-size: 46px;
+  font-size: 44px;
   margin-bottom: 1.2rem;
   max-width: 550px;
   cursor: pointer;
-}
-.blogTtl:hover {
-  color: var(--blue);
+  font-weight: 500;
 }
 .blogTxt {
   font-size: 19px;
@@ -72,15 +71,6 @@
   max-height: 89px;
   overflow: hidden;
   position: relative;
-}
-.blogTxt::after {
-  content: "...";
-  display: block;
-  color: var(--white);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  line-height: 1.5;
 }
 .date {
   font-size: 22px;

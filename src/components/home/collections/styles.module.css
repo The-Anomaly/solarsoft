@@ -27,7 +27,7 @@
   display: flex;
   justify-content: center;
   /* padding-bottom: 2rem; */
-  max-width: 450px;
+  max-width: 430px;
 }
 .txtSec {
   width: 50%;
@@ -141,7 +141,7 @@
     min-height: 350px;
   }
   .collection {
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   .btn {
     margin-left: auto;
@@ -218,11 +218,9 @@
   .collectionItem {
     text-align: center;
     margin-bottom: 0;
-    /* visibility: hidden; */
     display: none;
   }
   .activeCollection {
-    /* visibility: visible; */
     display: block;
   }
   .collectionItem br {
@@ -238,5 +236,18 @@
 @media screen and (max-width: 600px) {
   .ttl {
     font-size: 2rem;
+  }
+  .collectionTxt {
+    line-height: 1.5;
+    width: 90%;
+    margin: auto;
+  }
+  .collectionSubTtl {
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+  .activeCollection .collectionTtl {
+    font-size: 18px;
+    margin-bottom: 12px;
   }
 }

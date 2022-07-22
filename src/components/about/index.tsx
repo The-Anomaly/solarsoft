@@ -1,4 +1,4 @@
-import { aboutHeroImg, amaku, ifere, LinkedinIcon, moore, TwitterIcon } from "assets";
+import { amaku, ifere, LinkedinIcon, moore, TwitterIcon } from "assets";
 import { Button } from "components/generalComponents";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
@@ -57,7 +57,7 @@ const AboutUI = () => {
               and experience.
             </p>
           </div>
-          <div className={styles.heroImg}></div>{" "}
+          <div className={styles.heroImg}></div>
         </div>
       </section>
       <section className={styles.goalBg}>

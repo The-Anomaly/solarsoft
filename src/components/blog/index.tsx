@@ -5,17 +5,15 @@ import blogs from "../../blogs.json";
 
 const MainBlog = ({ title, article, image, category, date, url }) => {
   return (
-    <div className={styles.blog}>
+    <div className={styles.blog} onClick={() => window.open(url, "_blank")} role="button">
       <div className={styles.imgSec}>
         <img className={styles.img} src={image} alt="" />
       </div>
       <div className={styles.txtSec}>
         <p className={styles.label}>{category}</p>
-        <p className={styles.blogTtl} onClick={() => window.open(url, "_blank")} >{title}</p>
+        <p className={styles.blogTtl}>{title}</p>
         <p className={styles.date}>{date}</p>
-        <p className={styles.blogTxt}>
-          {article}
-        </p>
+        <p className={styles.blogTxt}>{article}</p>
       </div>
     </div>
   );

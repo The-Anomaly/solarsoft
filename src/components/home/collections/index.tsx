@@ -17,6 +17,7 @@ import {
   dmgd1,
   dmgd2,
   dmgd3,
+  alta3,
 } from "assets";
 import { Button } from "components";
 
@@ -57,7 +58,6 @@ const CollectionInfo: React.FC<CollectionInfoProps> = ({ active, state, changeAc
 
 const NFTCollection = () => {
   const [active, setActive] = React.useState(1);
-  const [activeImg, setActiveImg] = React.useState(0);
 
   const collectionList: CollectionInfoProps[] = [
     {
@@ -147,6 +147,7 @@ const NFTCollection = () => {
           <div className={styles.imgSec}>
             <div>
               <>
+                <img src={alta3} className={`${styles.krypto3} ${active === 1 ? styles.imageSlide : ""}`} alt="" />
                 <img src={alta2} className={`${styles.krypto2} ${active === 1 ? styles.imageSlide : ""}`} alt="" />
                 <img src={alta1} className={`${styles.krypto1} ${active === 1 ? styles.imageSlide : ""}`} alt="" />
               </>
@@ -213,6 +214,7 @@ const NFTCollection = () => {
               </button>
               <div className={styles.imgSecMobile}>
                 <>
+                  <img src={alta3} className={`${styles.krypto3} ${active === 1 ? styles.imageSlide : ""}`} alt="" />
                   <img src={alta2} className={`${styles.krypto2} ${active === 1 ? styles.imageSlide : ""}`} alt="" />
                   <img src={alta1} className={`${styles.krypto1} ${active === 1 ? styles.imageSlide : ""}`} alt="" />
                 </>

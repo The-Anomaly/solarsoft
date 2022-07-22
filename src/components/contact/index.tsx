@@ -42,7 +42,7 @@ const ContactUI: React.FC<ContactProps> = ({ contact, reset }) => {
     keys.map((key) => (contactInfo[key] === "" ? (errorMsgs[key] = "Required") : ""));
     setErrors(errorMsgs);
 
-    if (keys.every((key) => errorMsgs[key] == "")) {
+    if (keys.every((key) => errorMsgs[key] === "")) {
       return submit();
     }
   };

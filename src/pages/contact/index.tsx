@@ -1,5 +1,4 @@
 import { contactFormURL, postRequest } from "api";
-import { AxiosRequestConfig } from "axios";
 import { ContactInfo, ContactUI, Preloader, Toast } from "components";
 import * as React from "react";
 

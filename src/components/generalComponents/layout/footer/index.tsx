@@ -70,7 +70,7 @@ const Footer = ({ submitNewsletter, reset }: FooterProps) => {
             required
           />
           <Button disabled={!email} className={styles.btn} type={"light"} onClick={() => submitNewsletter(email)}>
-            SUBMIT
+            Submit
           </Button>
         </form>
         <p className={styles.txt}>By subscribing, I agree to receive communications by Solarsoft</p>

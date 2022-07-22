@@ -48,9 +48,9 @@ const ServiceDetails = () => {
         </p>
         <p className={styles.bottom1}>
           We elicit and validate clients use cases to see how the implementation of smart contracts can help proceed to
-          provide effective asset tokenisation via smart contracts.
+          provide effective asset tokenisation. These use cases include custom NFT smart contracts, tokens, DAOs and
+          Dapps.
         </p>
-        <p className={styles.bottom1}>These use cases include NFT custom smart contracts, tokens, DAOs and Dapps.</p>
         <div className={styles.contact}>
           <p>Start a conversation with us</p>
           <Button type="light" onClick={() => navigate(Routes.contactUs)}>

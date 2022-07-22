@@ -42,9 +42,8 @@
 }
 button.serviceBtn {
   margin: auto;
-  font-weight: 300;
-  font-size: 12px;
-  padding: 14px 20px;
+  font-weight: 400;
+  padding: 14px 22px;
 }
 .partners {
   text-align: center;
@@ -65,8 +64,10 @@ button.serviceBtn {
 .partners svg {
 }
 .serviceBtn:hover {
-  color: var(--secondaryText);
-  background: #12171f;
+  color: var(--blue);
+  background: var(--white);
+  border-color: var(--white);
+  font-weight: 600;
 }
 .slider {
   background: transparent;

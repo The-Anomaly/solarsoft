@@ -1,4 +1,4 @@
-import { apiCode, ArrowRight } from "assets";
+import { APICode, ArrowRight } from "assets";
 import { Button } from "components";
 import * as React from "react";
 import styles from "./styles.module.css";
@@ -21,7 +21,7 @@ const API = () => {
             Read our api docs
           </Button>
         </div>
-        <img className={styles.img} alt="code snippet" src={apiCode} />
+        <APICode className={styles.img} />
       </div>
     </section>
   );
