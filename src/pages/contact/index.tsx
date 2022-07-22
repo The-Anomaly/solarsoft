@@ -15,34 +15,34 @@ const Contact = () => {
 
   const submit = (data: ContactInfo) => {
     setLoading(true);
-    const contact = new FormData();
-    contact.append("entry.994487932", data.firstName);
-    contact.append("entry.2005620554", data.lastName);
-    contact.append("entry.308682794", data.workEmail);
-    contact.append("entry.1065046570", data.companyName);
-    contact.append("entry.839337160", data.message);
-
-    const config: AxiosRequestConfig = {
-      headers: {
-        "content-type": "application/x-www-form-urlencoded",
-      },
-      data: contact
+    const contact = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.workEmail,
+      company: data.companyName,
+      inquiry: data.message,
     };
 
-    postRequest(contactFormURL(), contact, config)
+    postRequest(contactFormURL(), contact)
       .then((response) => {
-        console.log(response);
-        if (response.status === 200) {
+        if (response.status === 200 && response.data.success) {
           setToast({
             title: "Great!",
             text: "Your inquiry was submitted successful",
             type: true,
             show: true,
           });
+          setReset(!reset);
+        } else {
+          setToast({
+            title: "Sorry",
+            text: "Your inquiry failed to submit",
+            type: false,
+            show: true,
+          });
         }
       })
       .catch((error) => {
-        console.log(error);
         setToast({
           title: "Sorry",
           text: "Your inquiry failed to submit",
@@ -53,8 +53,6 @@ const Contact = () => {
       .finally(() => {
         setLoading(false);
       });
-
-    // `entry.994487932=${contactInfo.firstName}&entry.2005620554=${contactInfo.lastName}&entry.308682794=${contactInfo.workEmail}&entry.1065046570=${contactInfo.companyName}&entry.839337160=${contactInfo.message}`,
   };
   return (
     <>
