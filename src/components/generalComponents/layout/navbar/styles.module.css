@@ -2,7 +2,7 @@
   position: fixed;
   width: 100vw;
   z-index: 2;
-  background: var(--black);
+  background: rgba(10, 14, 20, 0.95);
 }
 .nav {
   display: flex;
@@ -87,7 +87,7 @@ button.btn {
     display: flex;
     justify-content: space-between;
     padding: 1.5rem;
-    background: var(--black);
+    background: rgba(10, 14, 20, 0.95);
   }
   .menuBtn {
     width: 32px;
